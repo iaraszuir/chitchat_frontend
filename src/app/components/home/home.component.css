@@ -1,9 +1,18 @@
-.hero {
-    width: 100vw;
-    height: 500px;
-    background-image: url('https://i0.wp.com/sumafelicidad.es/wp-content/uploads/2018/05/gente-feliz.jpg?fit=800%2C300');
-    background-position: center;
-    background-size: cover;
-    background-blend-mode: multiply;
+.container {
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
+.hero {
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../assets/images/online-language-courses-isometric-composition-with-with-woman-choosing-chinese-app-tablet-screen_1284-58708.png');
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 5px solid rgb(41, 6, 82);
 }
