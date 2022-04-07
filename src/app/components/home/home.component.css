@@ -9,18 +9,33 @@
 }
 
 .hero {
-    padding: 20px;
+    padding: 10px;
     width: 100vw;
     height: 100vh;
     background-image: url('../../../assets/images/online-language-courses-isometric-composition-with-with-woman-choosing-chinese-app-tablet-screen_1284-58708.png');
     background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
-
+    opacity: 0.8;
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 4em;
     padding: 10px;
     font-family: Montserrat;
+    color: rgb(77, 27, 123);
+}
+
+.aboutus {
+
+    padding: 70px;
+    width: 30%;
+}
+
+.aboutus h3 {
+    color: crimson;
+}
+
+.aboutus p {
+    color: grey;
 }
