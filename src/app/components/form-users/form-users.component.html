@@ -1,0 +1,48 @@
+<p>form-users works!</p>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+
+    <div>
+        <label for="">Usuario:</label>
+        <input type="text" formControlName="username">
+    </div>
+    <div>
+        <label for="">Contraseña:</label>
+        <input type="text" formControlName="password">
+    </div>
+    <hr>
+    <div>
+        <label for="">Nombre:</label>
+        <input type="text" formControlName="name">
+    </div>
+    <div>
+        <label for="">Apellidos:</label>
+        <input type="text" formControlName="surname">
+    </div>
+
+    <div>
+        <label for="">Género:</label>
+        <select formControlName="gender">
+            <option value="f">Masculino</option>
+            <option value="m">Femenino</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="">Email:</label>
+        <input type="text" formControlName="email">
+    </div>
+    <div>
+        <label for="">Fecha de Nacimiento:</label>
+        <input type="text" formControlName="date_birth">
+    </div>
+
+    <div>
+        <input type="submit" value="enviar" [disabled]="!form.valid">
+    </div>
+
+
+
+
+</form>

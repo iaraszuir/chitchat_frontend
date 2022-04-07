@@ -8,6 +8,8 @@ import { HomeComponent } from './components/home/home.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
 import { LoginComponent } from './components/login/login.component';
+import { FormUsersComponent } from './components/form-users/form-users.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { LoginComponent } from './components/login/login.component';
     HomeComponent,
     NavBarComponent,
     UsersListComponent,
-    LoginComponent
+    LoginComponent,
+    FormUsersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
