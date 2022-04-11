@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { firstValueFrom } from 'rxjs';
+import { UsersService } from 'src/app/Services/users.service';
 
 @Component({
   selector: 'app-login',
@@ -7,14 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UsersService) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(login: any) {
 
-    console.log(login.value)
+    this.userService.loginUser(login.value);
+    console.log('Usuario registrado')
+
 
   }
 }

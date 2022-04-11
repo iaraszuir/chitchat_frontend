@@ -17,6 +17,10 @@ export class UsersService {
   //     this.HttpClient.get<any[]>(''));
   // }
 
+  loginUser(login: any) {
+    console.log(login)
+
+  }
 
   createUser(formValue: any) {
     console.log(formValue)
