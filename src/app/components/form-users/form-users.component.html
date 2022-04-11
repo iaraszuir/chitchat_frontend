@@ -8,40 +8,44 @@
     <title>Document</title>
 </head>
 
-<body>
-    <header>
-        <app-nav-bar></app-nav-bar>
-    </header>
+<div class="wrapper">
 
-    <main>
+    <body>
+        <header>
+            <app-nav-bar></app-nav-bar>
+        </header>
 
-        <div class="register">
+        <main>
+            <div class="hero"></div>
 
-            <form [formGroup]="form" (ngSubmit)="onSubmit()">
-                <div>
-                    <label for="">Usuario:</label>
-                    <input type="text" formControlName="username">
+
+
+            <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+                <div class="col-auto">
+                    <label for="" class="col-sm-2 col-form-label">Usuario:</label>
+                    <input type="text" formControlName="username" class="col-auto">
                 </div>
 
                 <div>
-                    <label for="">Contraseña:</label>
+                    <label for="" class="col-sm-2 col-form-label">Contraseña:</label>
                     <input type="text" formControlName="password">
                 </div>
 
                 <hr>
 
                 <div>
-                    <label for="">Nombre:</label>
+                    <label for="" class="col-sm-2 col-form-label">Nombre:</label>
                     <input type="text" formControlName="name">
                 </div>
 
                 <div>
-                    <label for="">Apellidos:</label>
+                    <label for="" class="col-sm-2 col-form-label">Apellidos:</label>
                     <input type="text" formControlName="surname">
                 </div>
 
                 <div>
-                    <label for="">Género:</label>
+                    <label for="" class="col-sm-2 col-form-label">Género:</label>
                     <select formControlName="gender">
                         <option value="f">Masculino</option>
                         <option value="m">Femenino</option>
@@ -49,12 +53,12 @@
                 </div>
 
                 <div>
-                    <label for="">Email:</label>
+                    <label for="" class="col-sm-2 col-form-label">Email:</label>
                     <input type="text" formControlName="email">
                 </div>
 
                 <div>
-                    <label for="">Fecha de Nacimiento:</label>
+                    <label for="" class="col-sm-2 col-form-label">Fecha de Nacimiento:</label>
                     <input type="text" formControlName="date_birth">
                 </div>
 
@@ -63,8 +67,12 @@
                 </div>
 
             </form>
-        </div>
-    </main>
-</body>
+
+
+
+
+        </main>
+    </body>
+</div>
 
 </html>

@@ -1,7 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.container {
+    display: flex;
+}
+
+
+.hero {
+    padding: 10px;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../../../assets/images/Checklist.jpg');
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    background-color: aquamarine;
+    position: relative;
+
+}
+
+
+
+
+
+/* Input */
+
+input {
+    width: 60%;
+    display: block;
+
+}
+
 input.ng-valid.ng-touched {
 
     border: 3px solid lightgreen;
-
 }
 
 input.ng-invalid.ng-touched {
