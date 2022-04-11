@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 
@@ -7,7 +7,10 @@ import { firstValueFrom } from 'rxjs';
 })
 export class UsersService {
 
+  baseUrl: string
+
   constructor(private HttpClient: HttpClient) {
+    this.baseUrl = 'http://localhost:3000/api/users/'
 
 
   }
@@ -23,9 +26,16 @@ export class UsersService {
   }
 
   createUser(formValue: any) {
-    console.log(formValue)
-    // return firstValueFrom(
-    //   this.HttpClient.post<any>(''));
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        "Content-Type": "application/json"
+      })
+
+    }
+
+    return firstValueFrom(
+      this.HttpClient.post(this.baseUrl + "register", formValue, httpOptions));
   }
 
 }
