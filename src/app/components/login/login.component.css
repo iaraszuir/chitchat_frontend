@@ -2,21 +2,47 @@
     display: flex;
     flex-direction: column;
     width: 400px;
+    margin-left: 50px;
 }
 
-button {
-    width: 150px;
-    background-color: white;
-    border: none;
-    color: rgb(86, 66, 173);
-    text-decoration: underline;
+h2 {
+    text-align: center;
+    color: gold;
+    text-shadow: 2px solid goldenrod;
+    font-size: 2.5em;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 5px;
 }
 
 .acceso input {
     display: block;
-    margin: 20px;
+    padding: 5px;
+    margin: 10px;
     border: 2px solid rgb(86, 66, 173);
-    background-color: blueviolet;
-    color: aliceblue;
-    border-radius: 5%;
+    background-color: rgb(86, 66, 173);
+    color: azure;
+    border-radius: 20px;
+    text-align: center;
+
+}
+
+.btn {
+    background-color: rgb(86, 66, 173);
+    color: azure;
+    width: 100%;
+    align-items: center;
+    border-radius: 20px;
+    border-radius: 20px;
+}
+
+.enlace {
+    display: block;
+    color: rgb(86, 66, 173);
+    text-align: center;
+
 }

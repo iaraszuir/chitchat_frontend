@@ -1,15 +1,19 @@
+<router-outlet></router-outlet>
+
 <div class="login">
     <h2>Login</h2>
+    <form #login="ngForm" (ngSubmit)="onSubmit(login)">
+        <div class="acceso">
+            <input type="text" placeholder="Usuario" name="usuario" ngModel>
+            <input type="text" placeholder="Contraseña" name="password" ngModel>
+        </div>
 
-    <div class="acceso">
-        <input type="text" placeholder="Usuario">
-        <input type="text" placeholder="Contraseña">
-    </div>
+        <a class="text-center p-2 enlace ">¿Has olvidado la contraseña?</a>
 
-    <button>¿Has olvidado la contraseña?</button>
+        <input type="submit" value="ACCEDER" class="btn">
 
-    <input type="submit" placeholder="Acceder">
+    </form>
 
-    <button>Crea tu cuenta</button>
+    <a [routerLink]="['/register']" class="text-center p-2 enlace ">Crea tu cuenta</a>
 
 </div>
