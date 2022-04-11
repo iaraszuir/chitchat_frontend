@@ -1,0 +1,22 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+button {
+    width: 150px;
+    background-color: white;
+    border: none;
+    color: rgb(86, 66, 173);
+    text-decoration: underline;
+}
+
+.acceso input {
+    display: block;
+    margin: 20px;
+    border: 2px solid rgb(86, 66, 173);
+    background-color: blueviolet;
+    color: aliceblue;
+    border-radius: 5%;
+}

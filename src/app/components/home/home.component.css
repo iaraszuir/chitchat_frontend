@@ -1,10 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 .container {
-    padding: 30px;
-    margin: 30px;
-    display: flex;
-    flex-wrap: wrap;
+
     align-items: center;
 }
 
@@ -17,11 +14,11 @@
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.8;
+    position: absolute;
 }
 
 h1 {
     font-size: 4em;
-    padding: 10px;
     font-family: Montserrat;
     color: rgb(77, 27, 123);
 }
@@ -30,6 +27,7 @@ h1 {
 
     padding: 70px;
     width: 30%;
+    position: relative;
 }
 
 .aboutus h3 {
