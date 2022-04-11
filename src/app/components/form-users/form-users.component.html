@@ -1,48 +1,78 @@
-<p>form-users works!</p>
+<!DOCTYPE html>
+<html lang="es">
 
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
+<div class="wrapper">
 
-    <div>
-        <label for="">Usuario:</label>
-        <input type="text" formControlName="username">
-    </div>
-    <div>
-        <label for="">Contraseña:</label>
-        <input type="text" formControlName="password">
-    </div>
-    <hr>
-    <div>
-        <label for="">Nombre:</label>
-        <input type="text" formControlName="name">
-    </div>
-    <div>
-        <label for="">Apellidos:</label>
-        <input type="text" formControlName="surname">
-    </div>
+    <body>
+        <header>
+            <app-nav-bar></app-nav-bar>
+        </header>
 
-    <div>
-        <label for="">Género:</label>
-        <select formControlName="gender">
-            <option value="f">Masculino</option>
-            <option value="m">Femenino</option>
-        </select>
-    </div>
-
-    <div>
-        <label for="">Email:</label>
-        <input type="text" formControlName="email">
-    </div>
-    <div>
-        <label for="">Fecha de Nacimiento:</label>
-        <input type="text" formControlName="date_birth">
-    </div>
-
-    <div>
-        <input type="submit" value="enviar" [disabled]="!form.valid">
-    </div>
+        <main>
+            <div class="hero"></div>
 
 
 
+            <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
 
-</form>
+                <div class="col-auto">
+                    <label for="" class="col-sm-2 col-form-label">Usuario:</label>
+                    <input type="text" formControlName="username" class="col-auto">
+                </div>
+
+                <div>
+                    <label for="" class="col-sm-2 col-form-label">Contraseña:</label>
+                    <input type="text" formControlName="password">
+                </div>
+
+                <hr>
+
+                <div>
+                    <label for="" class="col-sm-2 col-form-label">Nombre:</label>
+                    <input type="text" formControlName="name">
+                </div>
+
+                <div>
+                    <label for="" class="col-sm-2 col-form-label">Apellidos:</label>
+                    <input type="text" formControlName="surname">
+                </div>
+
+                <div>
+                    <label for="" class="col-sm-2 col-form-label">Género:</label>
+                    <select formControlName="gender">
+                        <option value="f">Masculino</option>
+                        <option value="m">Femenino</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="" class="col-sm-2 col-form-label">Email:</label>
+                    <input type="text" formControlName="email">
+                </div>
+
+                <div>
+                    <label for="" class="col-sm-2 col-form-label">Fecha de Nacimiento:</label>
+                    <input type="text" formControlName="date_birth">
+                </div>
+
+                <div>
+                    <input type="submit" value="enviar" [disabled]="!form.valid">
+                </div>
+
+            </form>
+
+
+
+
+        </main>
+    </body>
+</div>
+
+</html>
