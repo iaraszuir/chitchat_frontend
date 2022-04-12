@@ -25,7 +25,7 @@ export class EventsComponent implements OnInit {
   }
 
   onSubmit() {
-
+    const response = this.eventsService.createEvent(this.formEvent.value);
 
   }
 }

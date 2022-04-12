@@ -13,37 +13,43 @@
         <app-nav-bar></app-nav-bar>
     </header>
     <main>
-        <form class="form" [formGroup]="formEvent" (ngSubmit)="onSubmit()">
+
+        <div class="d-flex flex-wrap">
+            <form class="form" [formGroup]="formEvent" (ngSubmit)="onSubmit()">
 
 
-            <div>
-                <label>Título</label>
-                <input type="text" formControlName="title">
-            </div>
-            <div>
-                <label>Fecha</label>
-                <input type="date" formControlName="date">
-            </div>
-            <div>
-                <label>Hora</label>
-                <input type="time" formControlName="time">
-            </div>
-            <div>
-                <label>Imagen</label>
-                <input type="text" formControlName="imagen">
-            </div>
-            <div>
-                <label>Descripción</label>
-                <input type="text" formControlName="description">
-            </div>
-            <div>
-                <label>Direccion</label>
-                <input type="text" formControlName="address">
-            </div>
-            <div>
-                <input type="submit" value="Crear evento" [disabled]="!formEvent.valid">
-            </div>
-        </form>
+                <div>
+                    <label>Título</label>
+                    <input type="text" formControlName="title">
+                </div>
+                <div>
+                    <label>Fecha</label>
+                    <input type="date" formControlName="date">
+                </div>
+                <div>
+                    <label>Hora</label>
+                    <input type="time" formControlName="time">
+                </div>
+                <div>
+                    <label>Imagen</label>
+                    <input type="text" formControlName="image">
+                </div>
+                <div>
+                    <label>Descripción</label>
+                    <input type="text" formControlName="description">
+                </div>
+                <div>
+                    <label>Direccion</label>
+                    <input type="text" formControlName="address">
+                </div>
+                <div>
+                    <input type="submit" value="Crear evento">
+                </div>
+            </form>
+
+            <img src="../../../assets/images/6charlando.jpg">
+
+        </div>
 
     </main>
 
