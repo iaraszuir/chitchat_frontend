@@ -20,8 +20,11 @@ export class UsersService {
   //     this.HttpClient.get<any[]>(''));
   // }
 
-  loginUser(login: any) {
-    console.log(login)
+
+  loginUser(login: any): any {
+
+    return firstValueFrom(
+      this.HttpClient.post(this.baseUrl + "login", login));
 
   }
 

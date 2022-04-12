@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { firstValueFrom } from 'rxjs';
+import { Router } from '@angular/router';
 import { UsersService } from 'src/app/Services/users.service';
 
 @Component({
@@ -9,15 +9,31 @@ import { UsersService } from 'src/app/Services/users.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private userService: UsersService) { }
+  constructor(private userService: UsersService,
+    private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  onSubmit(login: any) {
+  async onSubmit(login: any) {
 
-    this.userService.loginUser(login.value);
-    console.log('Usuario registrado')
+    const respuesta = await this.userService.loginUser(login.value);
+    if (respuesta.error) {
+      alert(respuesta.error)
+    } else {
+
+      /*  alert(respuesta.success)
+       console.log(respuesta.token) */
+
+      localStorage.setItem('token', JSON.stringify(respuesta.token))
+      this.router.navigate(['/home'])
+
+
+    };
+
+
+
+
 
 
   }
