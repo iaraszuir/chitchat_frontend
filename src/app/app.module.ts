@@ -10,6 +10,7 @@ import { UsersListComponent } from './components/users-list/users-list.component
 import { LoginComponent } from './components/login/login.component';
 import { FormUsersComponent } from './components/form-users/form-users.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EventsComponent } from './components/events/events.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NavBarComponent,
     UsersListComponent,
     LoginComponent,
-    FormUsersComponent
+    FormUsersComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
