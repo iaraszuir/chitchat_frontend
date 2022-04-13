@@ -1,10 +1,15 @@
 <p>community works!</p>
+<div class="users"></div>
 
-<div *ngFor="let user of arrUsers">
+<div class="user" *ngFor="let user of arrUsers">
 
     <h2>{{user.username}}</h2>
-    <p>{{user.name}} {{user.surname}}</p>
-    <p>{{user.gender}}</p>
+    <p>Nombre: {{user.name}} {{user.surname}}</p>
+    <p>Género:{{user.gender}}</p>
+
+    <p>Hablo:{{user.languageHas}}</p>
+
+    <p>Quiere:{{user.languageWant}}</p>
 
 
 </div>
