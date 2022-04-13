@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
 
       /*  alert(respuesta.success)
        console.log(respuesta.token) */
+
       //Cuando hago login lo guardo en localStorage
       localStorage.setItem('token', respuesta.token)
       this.router.navigate(['/home'])

@@ -24,9 +24,16 @@ export class EventsService {
     }
 
     return firstValueFrom(
-      this.httpClient.post<any>(this.baseUrl, formValue, httpOptions)
+      this.httpClient.post<any>(this.baseUrl + "new", formValue, httpOptions)
     )
 
+  }
+
+  getAll() {
+
+    return firstValueFrom(
+      this.httpClient.get<any>(this.baseUrl)
+    )
   }
 
 }

@@ -1,0 +1,8 @@
+<router-outlet></router-outlet>
+<button [routerLink]="['/events/new']">Crea tu evento</button>
+
+<div *ngFor="let event of arrEvents">
+    <h2>{{event.title}}</h2>
+
+
+</div>
