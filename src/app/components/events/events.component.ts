@@ -24,8 +24,9 @@ export class EventsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit() {
-    const response = this.eventsService.createEvent(this.formEvent.value);
+  async onSubmit() {
+    const response = await this.eventsService.createEvent(this.formEvent.value);
+    console.log(response)
 
   }
 }

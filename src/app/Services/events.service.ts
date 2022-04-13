@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { firstValueFrom } from 'rxjs';
 
@@ -15,11 +15,25 @@ export class EventsService {
   }
 
   createEvent(formValue: any) {
-    console.log(formValue)
-    /* return firstValueFrom(
-      this.httpClient.post<any>(this.baseUrl, formValue)
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        "authentication": localStorage.getItem('token')
+      })
+
+    }
+
+    return firstValueFrom(
+      this.httpClient.post<any>(this.baseUrl + "new", formValue, httpOptions)
     )
- */
+
+  }
+
+  getAll() {
+
+    return firstValueFrom(
+      this.httpClient.get<any>(this.baseUrl)
+    )
   }
 
 }

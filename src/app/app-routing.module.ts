@@ -5,15 +5,17 @@ import { CommunityComponent } from './components/community/community.component';
 import { FormUsersComponent } from './components/form-users/form-users.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { UsersListComponent } from './components/users-list/users-list.component';
+import { EventListComponent } from './components/event-list/event-list.component';
+import { LoginGuard } from './login.guard';
+
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/login' },
-  { path: 'home', component: HomeComponent },
-  { path: 'community', component: CommunityComponent },
+  { path: 'home', component: HomeComponent, canActivate: [LoginGuard] },
+  { path: 'community', component: CommunityComponent, canActivate: [LoginGuard] },
   { path: 'login', component: LoginComponent },
-  { path: 'events', component: EventsComponent },
-  { path: 'users', component: UsersListComponent },
+  { path: 'events/new', component: EventsComponent, canActivate: [LoginGuard] },
+  { path: 'events', component: EventListComponent, canActivate: [LoginGuard] },
   { path: 'register', component: FormUsersComponent },
   { path: '**', redirectTo: '/home' }
 ];
