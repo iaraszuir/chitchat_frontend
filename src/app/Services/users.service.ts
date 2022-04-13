@@ -15,10 +15,11 @@ export class UsersService {
 
   }
 
-  // getAll() {
-  //   return firstValueFrom(
-  //     this.HttpClient.get<any[]>(''));
-  // }
+  // revisar la ruta de este getAll
+  getAll() {
+    return firstValueFrom(
+      this.HttpClient.get<any[]>(this.baseUrl));
+  }
 
 
   loginUser(login: any): any {
@@ -36,7 +37,7 @@ export class UsersService {
       })
 
     }
-
+    console.log(formValue)
     return firstValueFrom(
       this.HttpClient.post(this.baseUrl + "register", formValue, httpOptions));
   }

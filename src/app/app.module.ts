@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { FormUsersComponent } from './components/form-users/form-users.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EventsComponent } from './components/events/events.component';
+import { CommunityComponent } from './components/community/community.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { EventsComponent } from './components/events/events.component';
     UsersListComponent,
     LoginComponent,
     FormUsersComponent,
-    EventsComponent
+    EventsComponent,
+    CommunityComponent
   ],
   imports: [
     BrowserModule,
