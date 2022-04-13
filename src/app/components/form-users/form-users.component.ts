@@ -18,8 +18,9 @@ export class FormUsersComponent implements OnInit {
       password: new FormControl('', [Validators.required, Validators.pattern(/^[A-Za-z0-9!.]{5,12}$/)]),
       date_birth: new FormControl('', [Validators.required]),
       gender: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.required, Validators.pattern(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)])
-
+      email: new FormControl('', [Validators.required, Validators.pattern(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]),
+      languageHas: new FormControl('', [Validators.required]),
+      languageWant: new FormControl('', [Validators.required])
     })
   }
 

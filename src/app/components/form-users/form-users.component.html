@@ -47,8 +47,8 @@
                 <div>
                     <label for="" class="col-sm-2 col-form-label">Género:</label>
                     <select formControlName="gender">
-                        <option value="f">Masculino</option>
-                        <option value="m">Femenino</option>
+                        <option value="m">Masculino</option>
+                        <option value="f">Femenino</option>
                     </select>
                 </div>
 
@@ -59,7 +59,29 @@
 
                 <div>
                     <label for="" class="col-sm-2 col-form-label">Fecha de Nacimiento:</label>
-                    <input type="text" formControlName="date_birth">
+                    <input type="date" formControlName="date_birth">
+                </div>
+
+                <hr>
+
+                <div>
+                    <label for="" class="col-sm-2 col-form-label">¿Qué idioma hablas?:</label>
+                    <select formControlName="languageHas">
+                        <option value="1">Español </option>
+                        <option value="2">Inglés</option>
+                        <option value="3">Aleman</option>
+                        <option value="4">Japones</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="" class="col-sm-2 col-form-label">¿Qué idioma quieres aprender?:</label>
+                    <select formControlName="languageWant">
+                        <option value="1">Español </option>
+                        <option value="2">Inglés</option>
+                        <option value="3">Aleman</option>
+                        <option value="4">Japones</option>
+                    </select>
                 </div>
 
                 <div>

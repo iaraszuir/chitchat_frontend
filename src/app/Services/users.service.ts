@@ -37,7 +37,7 @@ export class UsersService {
       })
 
     }
-
+    console.log(formValue)
     return firstValueFrom(
       this.HttpClient.post(this.baseUrl + "register", formValue, httpOptions));
   }
