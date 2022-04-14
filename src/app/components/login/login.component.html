@@ -64,28 +64,41 @@
         </header>
 
 
-        <h1>¿Buscas aprender idiomas=? </h1>
+        <section class="elements">
 
+            <div class="firstpart">
 
+                <div class="introduction">
+                    <h1>Habla cualquier idioma con ChitChat </h1>
+                    <h2>Aprende, practica, mejora.</h2>
 
-        <div class="login">
-            <h2>Login</h2>
-            <form #login="ngForm" (ngSubmit)="onSubmit(login)">
-                <div class="acceso">
-                    <input type="text" placeholder="Usuario" name="username" ngModel>
-                    <input type="password" placeholder="Contraseña" name="password" ngModel>
                 </div>
 
-                <a class="text-center p-2 enlace ">¿Has olvidado la contraseña?</a>
+                <div class="login">
+                    <h2>Login</h2>
+                    <form #login="ngForm" (ngSubmit)="onSubmit(login)">
+                        <div class="acceso">
+                            <input type="text" placeholder="Usuario" name="username" ngModel>
+                            <input type="password" placeholder="Contraseña" name="password" ngModel>
+                        </div>
 
-                <input type="submit" value="ACCEDER" class="btn">
+                        <a class="text-center p-2 enlace ">¿Has olvidado la contraseña?</a>
 
-            </form>
+                        <input type="submit" value="ACCEDER" class="btn">
 
-            <a [routerLink]="['/register']" class="text-center p-2 enlace ">Crea tu cuenta</a>
+                    </form>
 
-        </div>
+                    <a [routerLink]="['/register']" class="text-center p-2 enlace ">Crea tu cuenta</a>
 
+                </div>
+            </div>
+
+            <div class="secondpart">
+
+                <img src="../../../assets/images/1amigos.jpg" alt="group">
+
+            </div>
+        </section>
 
     </div>
 
