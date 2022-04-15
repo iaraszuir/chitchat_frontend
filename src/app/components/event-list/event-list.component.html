@@ -1,8 +1,24 @@
 <router-outlet></router-outlet>
-<button [routerLink]="['/events/new']">Crea tu evento</button>
+<app-nav-bar></app-nav-bar>
+<div>
+    <figure>
+        <figcaption>"Nunca dejes de aprender porque la vida nunca deja de enseñar"</figcaption>
+        <img class="h-75 w-75 m-auto" src="../../../assets/images/2grupohablando.jpg">
 
-<div *ngFor="let event of arrEvents">
-    <h2>{{event.title}}</h2>
+    </figure>
 
+    <h2>EVENTOS</h2>
+    <div class="events d-flex flex-wrap fle m-2 row">
+        <div class="event col-lg-3 col-md-5 col-12" *ngFor="let event of arrEvents">
+            <h3>{{event.title}}</h3>
+            <hr>
+            <p>Os esperamos el dia: {{event.date}} a las {{event.time}}</p>
+            <img [src]="event.image">
+            <p>{{event.description}}</p>
+            <p>Dirección: {{event.address}}</p>
+            <button class="btngo">Asistiré!!</button>
+        </div>
+    </div>
 
+    <button class="btnevent" [routerLink]="['/events/new']">Crea tu evento</button>
 </div>

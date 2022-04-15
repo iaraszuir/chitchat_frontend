@@ -31,14 +31,15 @@ export class EventsService {
 
   getAll() {
 
+    const httpOptions = {
+      headers: new HttpHeaders({
+        "authentication": localStorage.getItem('token')
+      })
+
+    }
+
     return firstValueFrom(
-      this.httpClient.get<any>(this.baseUrl)
+      this.httpClient.get<any[]>(this.baseUrl, httpOptions)
     )
   }
-
 }
-
-
-
-
-

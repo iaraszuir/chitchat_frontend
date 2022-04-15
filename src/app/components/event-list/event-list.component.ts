@@ -15,7 +15,7 @@ export class EventListComponent implements OnInit {
 
   async ngOnInit() {
 
-    const [response] = await this.eventsService.getAll();
+    const response = await this.eventsService.getAll();
     this.arrEvents = response;
   }
 
