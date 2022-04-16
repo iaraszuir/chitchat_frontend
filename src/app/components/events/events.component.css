@@ -3,3 +3,26 @@ img {
     height: auto;
     width: 100%;
 }
+
+h2 {
+    text-align: center;
+    color: forestgreen;
+    margin: 20px;
+    font-size: 2em;
+}
+
+.formulario {
+    border: 2px solid forestgreen;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+input {
+    border: 2px solid lightgreen;
+    border-radius: 20px;
+}
+
+#submit {
+    background-color: forestgreen;
+}

@@ -1,62 +1,36 @@
-<!DOCTYPE html>
-<html lang="es">
+<app-nav-bar></app-nav-bar>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<h2>Crea tu evento privado</h2>
+<div class="d-flex row">
+    <div class="formulario col-5">
+        <form [formGroup]="formEvent" (ngSubmit)="onSubmit()">
+            <div class="form-group m-3">
+                <input class="form-control" type="text" formControlName="title" placeholder="Título">
+            </div>
+            <div class="form-group m-3">
+                <input class="form-control" type="text" formControlName="image" placeholder="Imagen">
+            </div>
+            <div class="form-group m-3">
+                <input class="form-control" type="text" formControlName="description" placeholder="Descripción">
+            </div>
+            <div class="form-group m-3">
+                <input class="form-control" type="text" formControlName="address" placeholder="Dirección">
+            </div>
+            <div class="form-group m-3">
+                <label class="form-label">¿Cuando?</label>
+                <input class="form-control" type="date" formControlName="date">
+            </div>
+            <div class="form-group m-3">
+                <label class="form-label">¿A qué hora?</label>
+                <input class="form-control" type="time" formControlName="time">
+            </div>
 
-<body>
-    <header>
-        <app-nav-bar></app-nav-bar>
-    </header>
-    <main>
-
-        <div class="d-flex flex-wrap">
-            <form class="form" [formGroup]="formEvent" (ngSubmit)="onSubmit()">
-
-
-                <div>
-                    <label>Título</label>
-                    <input type="text" formControlName="title">
-                </div>
-                <div>
-                    <label>Fecha</label>
-                    <input type="date" formControlName="date">
-                </div>
-                <div>
-                    <label>Hora</label>
-                    <input type="time" formControlName="time">
-                </div>
-                <div>
-                    <label>Imagen</label>
-                    <input type="text" formControlName="image">
-                </div>
-                <div>
-                    <label>Descripción</label>
-                    <input type="text" formControlName="description">
-                </div>
-                <div>
-                    <label>Direccion</label>
-                    <input type="text" formControlName="address">
-                </div>
-                <div>
-                    <input type="submit" value="Crear evento">
-                </div>
-            </form>
-
-            <img src="../../../assets/images/6charlando.jpg">
-
-        </div>
-
-    </main>
-
-
-
-
-
-</body>
-
-</html>
+            <div>
+                <input id="submit" class="btn m-3" type="submit" value="Enviar evento">
+            </div>
+        </form>
+    </div>
+    <div class="col-6 mt-3">
+        <img src="../../../assets/images/3gentehablando.jpg">
+    </div>
+</div>
