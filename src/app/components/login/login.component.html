@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -27,83 +33,114 @@
         </svg>
     </div>
 
-
     <div id="container">
 
         <header class="header">
             <!-- LOGO -->
-            <div class="logo">ChitChat</div>
+            <div class="logo">ChitChat <i class="fa-regular fa-comment"></i></div>
             <!-- NAVIGATION MENU -->
             <ul class="nav-links">
                 <!-- USING CHECKBOX HACK -->
                 <input type="checkbox" id="checkbox_toggle" />
                 <label for="checkbox_toggle" class="hamburger">&#9776;</label>
 
-
                 <!-- NAVIGATION MENUS -->
                 <div class="menu">
                     <li><a href="/">Home</a></li>
                     <li><a href="/">About</a></li>
-                    <li class="services">
-                        <a href="/">Services</a>
-                        <!-- DROPDOWN MENU
-                        <ul class="dropdown">
-                            <li><a href="/">Dropdown 1 </a></li>
-                            <li><a href="/">Dropdown 2</a></li>
-                            <li><a href="/">Dropdown 2</a></li>
-                            <li><a href="/">Dropdown 3</a></li>
-                            <li><a href="/">Dropdown 4</a></li>
-                        </ul> -->
-                    </li>
+                    <li class="services"><a href="/">Services</a></li>
                     <li><a href="/">Pricing</a></li>
                     <li><a href="/">Contact</a></li>
                 </div>
             </ul>
 
-
         </header>
 
+        <main>
+            <section class="elements">
 
-        <section class="elements">
+                <div class="firstpart">
 
-            <div class="firstpart">
+                    <div class="introduction">
+                        <h1>Habla cualquier idioma con <span> ChitChat </span> <i class="fa-regular fa-comment"></i></h1>
 
-                <div class="introduction">
-                    <h1>Habla cualquier idioma con ChitChat </h1>
-                    <h2>Únete a la comunidad</h2>
+                    </div>
 
+                    <img src="../../../assets/images/estudiosamejorada.png" alt="group">
                 </div>
 
-                <img src="../../../assets/images/burbujapelirroja.png" alt="group">
-            </div>
+                <div class="secondpart">
 
-            <div class="secondpart">
+                    <div class="login">
+                        <h2>Login</h2>
+                        <form #login="ngForm" (ngSubmit)="onSubmit(login)">
+                            <div class="acceso">
+                                <input type="text" placeholder="Usuario" name="username" ngModel>
+                                <input type="password" placeholder="Contraseña" name="password" ngModel>
+                            </div>
 
-                <div class="login">
-                    <h2>Login</h2>
-                    <form #login="ngForm" (ngSubmit)="onSubmit(login)">
-                        <div class="acceso">
-                            <input type="text" placeholder="Usuario" name="username" ngModel>
-                            <input type="password" placeholder="Contraseña" name="password" ngModel>
-                        </div>
+                            <div>
+                                <input type="submit" value="ACCEDER" class="btn">
+                            </div>
+                            <a class="text-center p-2 enlace ">¿Has olvidado la contraseña?</a>
 
-                        <a class="text-center p-2 enlace ">¿Has olvidado la contraseña?</a>
+                        </form>
 
-                        <input type="submit" value="ACCEDER" class="btn">
+                        <a [routerLink]="['/register']" class="text-center p-2 enlace ">Crea tu cuenta</a>
 
-                    </form>
+                    </div>
+                </div>
+            </section>
 
-                    <a [routerLink]="['/register']" class="text-center p-2 enlace ">Crea tu cuenta</a>
+            <section class="aboutus">
+                <h2>¿Qué es ChitChat?</h2>
+                <h4>La App que te ayudará a practicar el idioma que más quieras. </h4>
+                <div class="cards">
 
+                    <div>
+                        <img src="../../../assets/images/estudiantes.jpg" alt="">
+                        <h3>Nuevos idiomas</h3>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem praesentium ducimus autem dolor magnam itaque assumenda illum, </p>
+                    </div>
+                    <div>
+                        <img src="../../../assets/images/hablando.jpg" alt="">
+                        <h3>Consigue fluidez</h3>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ad repellendus corrupti possimus, rerum facilis optio non </p>
+                    </div>
+                    <div>
+                        <img src="../../../assets/images/cuadernos.jpg" alt="">
+                        <h3>Nuevas amistades</h3>
+                        <hr>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quidem a officiis amet sunt suscipit voluptates aliquam </p>
+                    </div>
                 </div>
 
+            </section>
 
-            </div>
-        </section>
+            <section class="skills">
 
+                <div class="one">
+                    <div>
+                        <img src="" alt="">
+                    </div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam a, excepturi ducimus ipsam laudantium deserunt sequi. Adipisci dolore, quis voluptatem beatae voluptate expedita possimus architecto nihil sint, dolorem odit. Exercitationem!</p>
+
+                    </div>
+                </div>
+
+                <div class="two">
+
+                    <div></div>
+                </div>
+            </section>
+
+
+
+        </main>
     </div>
-
-
 
 
 
