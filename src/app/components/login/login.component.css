@@ -27,7 +27,8 @@ b6f0e1
 
 :root {
 
-    --fontfamily: var('Roboto', sans-serif);
+    --fontfamily: 'Roboto', sans-serif;
+    --corse: 1100px;
 
 }
 
@@ -83,6 +84,7 @@ li {
     justify-content: space-between;
     padding: 20px;
     background-color: transparent;
+
 }
 
 .nav-links a {
@@ -142,7 +144,7 @@ li {
 
 }
 
-span {
+.introduction span {
 
     color: #3a6ac2;
     font-size: 80px;
@@ -300,25 +302,49 @@ div {
 }
 
 
-#img2 {}
+
+/* CARDS*/
+
+.cards {
+    width: 100%;
+    height: 500px;
+    background-color: #7aaefd;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cards div {
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 20px;
+
+}
+
+.cards div h2 {
+    font-size: 70px;
+    padding-top: 30px;
+    color: #44caaa;
 
 
-#img3 {}
+}
+
+.cards div h3 {
+    font-size: 30px;
+    padding-top: 30px;
+    color: #3a6ac2;
+    font-weight: 700;
 
 
-/*  CARRUSEL*/
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.cards div p {
+    color: #3a6ac2;
+    font-size: 20px;
+    padding-top: 30px;
+}
 
 
 
@@ -335,8 +361,9 @@ input[type=checkbox] {
 
 /*HAMBURGER MENU*/
 .hamburger {
+    color: #fff;
     display: none;
-    font-size: 24px;
+    font-size: 50px;
     user-select: none;
 }
 
@@ -345,7 +372,7 @@ input[type=checkbox] {
     .menu {
         display: none;
         position: absolute;
-        background-color: teal;
+        background-color: #44caaa;
         right: 0;
         left: 0;
         text-align: center;
@@ -354,7 +381,7 @@ input[type=checkbox] {
 
     .menu li:hover {
         display: inline-block;
-        background-color: #4c9e9e;
+        background-color: #3a6ac2;
         transition: 0.3s ease;
     }
 
@@ -379,4 +406,106 @@ input[type=checkbox] {
     .dropdown li:hover {
         background-color: #4c9e9e;
     }
+
+    /*HERO */
+
+    .elements {
+        display: block;
+        max-width: 1100px;
+    }
+
+    .firstpart {
+        width: 100%;
+
+    }
+
+    /*Text*/
+
+    .introduction {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+
+    /*Login*/
+
+    .secondpart {
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .login {
+        width: 400px;
+        margin: 100px;
+        margin-top: 200px;
+        background-color: #7aaefd;
+        border: 2px solid white;
+        border-radius: 30px;
+        box-shadow: 5px 5px 2px #3a6ac2;
+        z-index: 100;
+
+    }
+
+    /* PARTS ABOUTUS */
+
+
+    .abouthe {
+        margin-top: 50px;
+        font-size: 30px;
+        height: 100px;
+
+    }
+
+    .parts {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+
+
+    }
+
+    .aboutus .aboutimg {
+        width: 50%;
+
+    }
+
+    .aboutus img {
+        width: 100%;
+        margin-left: 0px;
+        align-items: center;
+
+    }
+
+    .abouttext {
+        width: 100%;
+        margin: 10px;
+    }
+
+
+    /*CARDS*/
+
+    /* CARDS*/
+
+    .cards {
+
+        height: auto;
+        background-color: #7aaefd;
+        display: block;
+        align-items: center;
+
+
+    }
+
+    .cards div {
+        width: 500px;
+
+    }
+
+
+
+
+
+
 }
