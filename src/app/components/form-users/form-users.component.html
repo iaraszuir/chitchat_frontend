@@ -8,65 +8,75 @@
     <title>Document</title>
 </head>
 
-<div class="wrapper">
-
-    <body>
-        <header>
-            <app-nav-bar></app-nav-bar>
-        </header>
-
-        <main>
-            <div class="hero"></div>
 
 
+<body>
 
-            <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <header>
+        <app-nav-bar></app-nav-bar>
+    </header>
 
-                <div class="col-auto">
-                    <label for="" class="col-sm-2 col-form-label">Usuario:</label>
-                    <input type="text" formControlName="username" class="col-auto">
-                </div>
+    <main>
+
+
+
+
+
+        <form class="register" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+            <h2>● Bienvenido a ChitChat ●</h2>
+
+            <div>
+
+                <input type="text" formControlName="username" placeholder="Usuario" ngModel>
+            </div>
+
+            <div>
+
+                <input type="text" formControlName="password" placeholder="Contraseña" ngModel>
+            </div>
+
+            <hr>
+
+            <div>
+
+                <input type="text" formControlName="name" placeholder="Nombre" ngModel>
+            </div>
+
+            <div>
+                <input type="text" formControlName="surname" placeholder="Apellidos" ngModel>
+            </div>
+
+
+            <div>
+                <input type="text" formControlName="email" placeholder="Email" ngModel>
+            </div>
+
+            <div>
+
+                <input type="date" formControlName="date_birth" placeholder="Fecha de nacimiento" ngModel>
+            </div>
+
+            <div>
+                <label for="" class="col-sm-2 col-form-label">Género:</label>
+                <select formControlName="gender" class="form-select form-select-sm">
+
+                    <option value="m">Masculino</option>
+                    <option value="f">Femenino</option>
+                </select>
+            </div>
+            <hr>
+
+            <div>
+                <p>Ahora toca los idiomas, por ahora con uno de cada bastará para empezar 😀</p>
+            </div>
+
+            <div class="selects">
+
 
                 <div>
-                    <label for="" class="col-sm-2 col-form-label">Contraseña:</label>
-                    <input type="text" formControlName="password">
-                </div>
-
-                <hr>
-
-                <div>
-                    <label for="" class="col-sm-2 col-form-label">Nombre:</label>
-                    <input type="text" formControlName="name">
-                </div>
-
-                <div>
-                    <label for="" class="col-sm-2 col-form-label">Apellidos:</label>
-                    <input type="text" formControlName="surname">
-                </div>
-
-                <div>
-                    <label for="" class="col-sm-2 col-form-label">Género:</label>
-                    <select formControlName="gender">
-                        <option value="m">Masculino</option>
-                        <option value="f">Femenino</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="" class="col-sm-2 col-form-label">Email:</label>
-                    <input type="text" formControlName="email">
-                </div>
-
-                <div>
-                    <label for="" class="col-sm-2 col-form-label">Fecha de Nacimiento:</label>
-                    <input type="date" formControlName="date_birth">
-                </div>
-
-                <hr>
-
-                <div>
-                    <label for="" class="col-sm-2 col-form-label">¿Qué idioma hablas?:</label>
-                    <select formControlName="languageHas">
+                    <label for="" class="col-sm-2 col-form-label">Puedes enseñar:</label>
+                    <select formControlName="languageHas" class="form-select form-select-sm">
                         <option value="1">Español </option>
                         <option value="2">Inglés</option>
                         <option value="3">Aleman</option>
@@ -75,26 +85,27 @@
                 </div>
 
                 <div>
-                    <label for="" class="col-sm-2 col-form-label">¿Qué idioma quieres aprender?:</label>
-                    <select formControlName="languageWant">
+                    <label for="" class="col-sm-2 col-form-label">Quieres aprender:</label>
+                    <select formControlName="languageWant" class="form-select form-select-sm">
                         <option value="1">Español </option>
                         <option value="2">Inglés</option>
                         <option value="3">Aleman</option>
                         <option value="4">Japones</option>
                     </select>
                 </div>
+            </div>
 
-                <div>
-                    <input type="submit" value="enviar" [disabled]="!form.valid">
-                </div>
-
-            </form>
-
-
+            <div>
+                <input class="btn" type="submit" value="enviar" [disabled]="!form.valid">
+            </div>
+        </form>
 
 
-        </main>
-    </body>
-</div>
+
+
+
+    </main>
+</body>
+
 
 </html>
