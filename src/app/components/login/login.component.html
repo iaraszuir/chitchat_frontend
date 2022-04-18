@@ -1,26 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-    <router-outlet></router-outlet>
-
-    <div class="wave">
-        <svg width="100%" height="200px" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <path fill="white" d="
+<div class="wave">
+    <svg width="100%" height="200px" fill="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <path fill="white" d="
             M0 67
             C 273,183
               822,-41
@@ -29,170 +9,170 @@
             H 0 
             V 67
             Z">
-            </path>
-        </svg>
-    </div>
-
-    <div id="container">
-
-        <header class="header">
-            <!-- LOGO -->
-            <div class="logo">ChitChat <i class="fa-regular fa-comment"></i></div>
-            <!-- NAVIGATION MENU -->
-            <ul class="nav-links">
-                <!-- USING CHECKBOX HACK -->
-                <input type="checkbox" id="checkbox_toggle" />
-                <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-
-                <!-- NAVIGATION MENUS -->
-                <div class="menu">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li class="services"><a href="/">Services</a></li>
-                    <li><a href="/">Pricing</a></li>
-                    <li><a href="/">Contact</a></li>
-                </div>
-            </ul>
-
-        </header>
+        </path>
+    </svg>
+</div>
 
 
-        <main>
+<div id="container">
 
-            <!-- Hero text and login -->
-            <section class="elements">
 
-                <div class="firstpart">
 
-                    <div class="introduction">
-                        <h1>Habla cualquier idioma con <span> ChitChat </span> <i class="fa-regular fa-comment"></i></h1>
 
-                    </div>
+    <header>
 
-                    <img src="../../../assets/images/estudiosamejorada.png" alt="group">
-                </div>
-
-                <div class="secondpart">
-
-                    <div class="login">
-                        <h2>Login</h2>
-                        <form #login="ngForm" (ngSubmit)="onSubmit(login)">
-                            <div class="acceso">
-                                <input type="text" placeholder="Usuario" name="username" ngModel>
-                                <input type="password" placeholder="Contraseña" name="password" ngModel>
-                            </div>
-
-                            <div>
-                                <input type="submit" value="ACCEDER" class="btn">
-                            </div>
-                            <a class="text-center p-2 enlace ">¿Has olvidado la contraseña?</a>
-
-                        </form>
-
-                        <a [routerLink]="['/register']" class="text-center p-2 enlace ">Crea tu cuenta</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">ChitChat</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" href="#">Sobre nosotros</a>
+                        <a class="nav-link" href="#">Skills</a>
 
                     </div>
                 </div>
-            </section>
+            </div>
+        </nav>
 
 
 
-            <!-- About us section -->
-            <section class="aboutus">
+    </header>
 
-                <div class="abouthe">
-                    <h2>¿Qué es ChitChat?</h2>
-                    <h4>La App que de idiomas que te ayudará a mejorar. </h4>
+
+    <main>
+
+        <!-- Hero text and login -->
+        <section class="elements">
+
+            <div class="firstpart">
+
+                <div class="introduction">
+                    <h1>Habla cualquier idioma con <span> ChitChat </span> <i class="fa-regular fa-comment"></i></h1>
+
                 </div>
 
-                <div class="parts">
-                    <div class="aboutimg">
-                        <div> <img src="../../../assets/images/3gentehablando.jpg" alt=""></div>
-                    </div>
+                <img src="../../../assets/images/estudiosamejorada.png" alt="group">
+            </div>
 
-                    <div class="abouttext">
-                        <div>
+            <div class="secondpart">
 
-                            <h2>Consigue fluidez</h2>
-                            <p> Hoy en día es muy importante saber comunicarse con las personas que nos rodean y es mucho más importante saber hacerlo en más de un idioma.
-                            </p>
-
+                <div class="login">
+                    <h2>Login</h2>
+                    <form #login="ngForm" (ngSubmit)="onSubmit(login)">
+                        <div class="acceso">
+                            <input type="text" placeholder="Usuario" name="username" ngModel>
+                            <input type="password" placeholder="Contraseña" name="password" ngModel>
                         </div>
-                    </div>
-                </div>
 
-                <hr>
-
-                <div class="parts">
-
-                    <div class="aboutimg">
-                        <div> <img id="img2" src="../../../assets/images//1amigos.jpg" alt=""></div>
-                    </div>
-                    <div class="abouttext">
                         <div>
-
-                            <h2>Relaciónate</h2>
-                            <p> Conoce a nuevas e interesantes personas que tambien desean compartir y aprender nuevos idiomas.
-                            </p>
-
+                            <input type="submit" value="ACCEDER" class="btn">
                         </div>
-                    </div>
+                        <a class="text-center p-2 enlace ">¿Has olvidado la contraseña?</a>
+
+                    </form>
+
+                    <a [routerLink]="['/register']" class="text-center p-2 enlace ">Crea tu cuenta</a>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- About us section -->
+        <section class="aboutus">
+
+            <div class="abouthe">
+                <h2>¿Qué es ChitChat?</h2>
+                <h4>La App que de idiomas que te ayudará a mejorar. </h4>
+            </div>
+
+            <div class="parts">
+                <div class="aboutimg">
+                    <div> <img src="../../../assets/images/3gentehablando.jpg" alt=""></div>
                 </div>
 
-                <hr>
-
-                <div class="parts">
-
-                    <div class="aboutimg">
-                        <div> <img id="img3" src="../../../assets/images/5viaje.jpg" alt=""></div>
-                    </div>
-                    <div class="abouttext">
-                        <div>
-
-                            <h2>Visita nuevos lugares</h2>
-                            <p> En cualquier parte, donde quieras, podras encontrar eventos o quedadas para seguir mejorando el idioma que más te guste.
-                            </p>
-
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <section class="skill">
-
-                <div class="cards">
-                    <div>
-                        <h2><i class="fa-solid fa-user"></i></h2>
-                        <h3>Tu propio perfil</h3>
-                        <p>Deja que la comunidad te conozca creandote un perfil personal.</p>
-
-                    </div>
-                    <div>
-                        <h2><i class="fa-solid fa-calendar-check"></i></h2>
-                        <h3>Crea eventos</h3>
-                        <p>Busca que eventos pueden interesarte o crea nuevos eventos para el resto de la comunidad.</p>
-                    </div>
+                <div class="abouttext">
                     <div>
 
-                        <h2><i class="fa-solid fa-earth-americas"></i></h2>
-                        <h3>Comunidad</h3>
-                        <p>No importa donde estes ni de donde seas, todo el mundo es bienvenido en ChitChat.</p>
+                        <h2>Consigue fluidez</h2>
+                        <p> Hoy en día es muy importante saber comunicarse con las personas que nos rodean y es mucho más importante saber hacerlo en más de un idioma.
+                        </p>
+
                     </div>
                 </div>
+            </div>
+
+            <hr>
+
+            <div class="parts">
+
+                <div class="aboutimg">
+                    <div> <img id="img2" src="../../../assets/images//1amigos.jpg" alt=""></div>
+                </div>
+                <div class="abouttext">
+                    <div>
+
+                        <h2>Relaciónate</h2>
+                        <p> Conoce a nuevas e interesantes personas que tambien desean compartir y aprender nuevos idiomas.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="parts">
+
+                <div class="aboutimg">
+                    <div> <img id="img3" src="../../../assets/images/5viaje.jpg" alt=""></div>
+                </div>
+                <div class="abouttext">
+                    <div>
+
+                        <h2>Visita nuevos lugares</h2>
+                        <p> En cualquier parte, donde quieras, podras encontrar eventos o quedadas para seguir mejorando el idioma que más te guste.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="skill">
+
+            <div class="cards">
+                <div>
+                    <h2><i class="fa-solid fa-user"></i></h2>
+                    <h3>Tu propio perfil</h3>
+                    <p>Deja que la comunidad te conozca creandote un perfil personal.</p>
+
+                </div>
+                <div>
+                    <h2><i class="fa-solid fa-calendar-check"></i></h2>
+                    <h3>Crea eventos</h3>
+                    <p>Busca que eventos pueden interesarte o crea nuevos eventos para el resto de la comunidad.</p>
+                </div>
+                <div>
+
+                    <h2><i class="fa-solid fa-earth-americas"></i></h2>
+                    <h3>Comunidad</h3>
+                    <p>No importa donde estes ni de donde seas, todo el mundo es bienvenido en ChitChat.</p>
+                </div>
+            </div>
 
 
 
-            </section>
+        </section>
 
 
 
-        </main>
-    </div>
+    </main>
 
-
-
-
-</body>
-
-</html>
+</div>
