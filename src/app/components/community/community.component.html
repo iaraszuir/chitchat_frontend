@@ -1,16 +1,24 @@
 <app-nav-bar></app-nav-bar>
 
-<div class="users"></div>
+<div class="users">
 
-<div class="user" *ngFor="let user of arrUsers">
+    <div class="user" *ngFor="let user of arrUsers">
+        <div class="avatar">
+            <img src="../../../assets/images/16467606582013.jpg" alt="">
 
-    <h2>{{user.username}}</h2>
-    <p>Nombre: {{user.name}} {{user.surname}}</p>
-    <p>Género:{{user.gender}}</p>
+        </div>
+        <div class="data">
 
-    <p>Hablo:{{user.languageHas}}</p>
+            <h2>{{user.username}}</h2>
+            <p>Nombre: {{user.name}} {{user.surname}}</p>
+            <p>Género:{{user.gender}}</p>
 
-    <p>Quiere:{{user.languageWant}}</p>
+            <p>Hablo:{{user.languageHas}}</p>
+
+            <p>Quiere:{{user.languageWant}}</p>
+
+        </div>
 
 
+    </div>
 </div>
