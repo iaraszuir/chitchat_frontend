@@ -26,6 +26,7 @@ export class EventsComponent implements OnInit {
 
   async onSubmit() {
     const response = await this.eventsService.createEvent(this.formEvent.value);
+    this.formEvent.reset();
     console.log(response)
 
   }

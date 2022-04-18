@@ -38,3 +38,7 @@ footer {
 footer a:hover {
     color: azure;
 }
+
+.morado {
+    background-color: rgb(77, 27, 123)
+}

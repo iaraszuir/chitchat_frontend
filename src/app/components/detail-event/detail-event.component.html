@@ -1,0 +1,11 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="evento">
+    <h3>{{event.title}}</h3>
+    <hr>
+    <p>Os esperamos el dia: {{event.date | date }} a las {{event.time | slice:0:-3}}</p>
+    <img [src]="event.image">
+    <p>{{event.description}}</p>
+    <p>Dirección: {{event.address}}</p>
+</div>
+<app-mapang [lat]="event.lat" [lng]="event.lng"></app-mapang>

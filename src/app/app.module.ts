@@ -1,4 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
+import localEs from '@angular/common/locales/es';
+import { registerLocaleData } from '@angular/common';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -12,6 +15,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EventsComponent } from './components/events/events.component';
 import { CommunityComponent } from './components/community/community.component';
 import { EventListComponent } from './components/event-list/event-list.component';
+import { DetailEventComponent } from './components/detail-event/detail-event.component';
+import { MapangComponent } from './components/mapang/mapang.component';
+import { AgmCoreModule } from '@agm/core';
+
+
+registerLocaleData(localEs);
 
 @NgModule({
   declarations: [
@@ -22,17 +31,24 @@ import { EventListComponent } from './components/event-list/event-list.component
     FormUsersComponent,
     EventsComponent,
     CommunityComponent,
-    EventListComponent
+    EventListComponent,
+    DetailEventComponent,
+    MapangComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBMOcTcAkobrlfKIBOJNz6lDw2R5fJsk_Q'
+    })
 
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'es-ES' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -24,7 +24,8 @@ export class EventsService {
     }
 
     return firstValueFrom(
-      this.httpClient.post<any>(this.baseUrl + "new", formValue, httpOptions)
+      this.httpClient.post<any>(this.baseUrl + "/new", formValue, httpOptions)
+
     )
 
   }
@@ -40,6 +41,19 @@ export class EventsService {
 
     return firstValueFrom(
       this.httpClient.get<any[]>(this.baseUrl, httpOptions)
+    )
+  }
+
+  getById(pEventId: number) {
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        "authentication": localStorage.getItem('token')
+      })
+
+    }
+    return firstValueFrom(
+      this.httpClient.get<any>(this.baseUrl + '/' + pEventId, httpOptions)
     )
   }
 }

@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { EventListComponent } from './components/event-list/event-list.component';
 import { LoginGuard } from './login.guard';
+import { DetailEventComponent } from './components/detail-event/detail-event.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'community', component: CommunityComponent, canActivate: [LoginGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'events/new', component: EventsComponent, canActivate: [LoginGuard] },
+  { path: 'events/:pEventId', component: DetailEventComponent, canActivate: [LoginGuard] },
   { path: 'events', component: EventListComponent, canActivate: [LoginGuard] },
   { path: 'register', component: FormUsersComponent },
   { path: '**', redirectTo: '/home' }
