@@ -1,11 +1,18 @@
 <app-nav-bar></app-nav-bar>
 
-<div class="evento">
+<div class="evento container d-flex flex-wrap">
+    <img [src]="event.image">
     <h3>{{event.title}}</h3>
     <hr>
-    <p>Os esperamos el dia: {{event.date | date }} a las {{event.time | slice:0:-3}}</p>
-    <img [src]="event.image">
-    <p>{{event.description}}</p>
-    <p>Dirección: {{event.address}}</p>
+    <div class="datos">
+        <p>Dia: {{event.date | date }}</p>
+        <p>Hora: {{event.time | slice:0:-3}}</p>
+        <p class="description">{{event.description}}</p>
+    </div>
+
+    <div class="map">
+        <p>Ubicación: {{event.address}}</p>
+        <app-mapang [lat]="event.lat" [lng]="event.lng">
+        </app-mapang>
+    </div>
 </div>
-<app-mapang [lat]="event.lat" [lng]="event.lng"></app-mapang>

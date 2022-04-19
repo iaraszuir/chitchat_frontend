@@ -7,12 +7,22 @@
     </figure>
 
     <h2>EVENTOS</h2>
+    <div class="d-flex m-3 p-3">
+        <select class="form-select" aria-label="Default select example" (change)="onChange($event)">
+            <option value="all">Todos los eventos</option>
+            <option value="1">Español</option>
+            <option value="2">Inglés</option>
+            <option value="3">Alemán</option>
+            <option value="4">Japonés</option>
+        </select>
+    </div>
     <div class="events d-flex flex-wrap fle m-2 row">
         <div class="event col-lg-3 col-md-5 col-12" *ngFor="let event of arrEvents">
             <h3>{{event.title}}</h3>
             <hr>
             <p>Fecha: {{event.date | date}}</p>
             <p>Hora: {{event.time | slice:0:-3}}</p>
+            <p>Idioma: {{event.language_name}}</p>
             <img [src]="event.image">
             <div class="d-flex justify-content-between">
                 <button class="btn btn-outline-light mt-3" [routerLink]="['/events', event.id]"> Ver más -> </button>

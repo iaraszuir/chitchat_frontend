@@ -14,10 +14,22 @@ export class EventListComponent implements OnInit {
   }
 
   async ngOnInit() {
-
     const response = await this.eventsService.getAll();
     this.arrEvents = response;
   }
 
+  async onChange($event: any) {
+    if ($event.target.value === 'all') {
+      const response = await this.eventsService.getAll();
+      this.arrEvents = response;
+    }
+    else {
+
+      const response = await this.eventsService.getByLan($event.target.value)
+      this.arrEvents = response;
+
+    }
+
+  }
 
 }
