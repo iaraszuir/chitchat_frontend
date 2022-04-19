@@ -9,11 +9,11 @@ import { UsersService } from 'src/app/Services/users.service';
 export class CommunityComponent implements OnInit {
 
   arrUsers: any[]
-  arrFilter: any[]
+
 
   constructor(private userservice: UsersService) {
     this.arrUsers = []
-    this.arrFilter = []
+
 
   }
 
@@ -25,9 +25,19 @@ export class CommunityComponent implements OnInit {
 
 
   async onChange($event: any) {
-    const response = await this.userservice.getByLan($event.target.value, "h")
-    this.arrUsers = response
-    console.log(response)
+
+
+    if ($event.target.value === "reset") {
+      const response = await this.userservice.getAll()
+      this.arrUsers = response
+    } else {
+
+      const response = await this.userservice.getByLan($event.target.value, "h")
+      this.arrUsers = response
+    }
+
+
+
 
   }
 

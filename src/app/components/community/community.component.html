@@ -1,14 +1,17 @@
 <app-nav-bar></app-nav-bar>
 
+<div class="hero">
+
+</div>
+
 
 <div class="container">
-
 
     <div class="selector">
         <div>
             <label for="staticEmail" class="col-sm-2 col-form-label">Hablan:</label>
             <select (change)="onChange($event)" class="form-select form-select-sm">
-
+                <option value="reset">Reset</option>
                 <option value="1">Español </option>
                 <option value="2">Inglés</option>
                 <option value="3">Aleman</option>
@@ -19,7 +22,7 @@
         <div>
             <label for="staticEmail" class="col-sm-2 col-form-label">Enseñan:</label>
             <select (change)="onChangeW($event)" class="form-select form-select-sm">
-
+                <option value="reset">Reset</option>
                 <option value="1">Español </option>
                 <option value="2">Inglés</option>
                 <option value="3">Aleman</option>
@@ -50,9 +53,6 @@
         </div>
     </div>
 
-    <div class="btn">
-        <button>Anterior </button>
-        <button>Siguiente</button>
-    </div>
+
 
 </div>
