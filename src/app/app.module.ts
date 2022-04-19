@@ -18,6 +18,7 @@ import { EventListComponent } from './components/event-list/event-list.component
 import { DetailEventComponent } from './components/detail-event/detail-event.component';
 import { MapangComponent } from './components/mapang/mapang.component';
 import { AgmCoreModule } from '@agm/core';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 registerLocaleData(localEs);
@@ -33,7 +34,8 @@ registerLocaleData(localEs);
     CommunityComponent,
     EventListComponent,
     DetailEventComponent,
-    MapangComponent
+    MapangComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

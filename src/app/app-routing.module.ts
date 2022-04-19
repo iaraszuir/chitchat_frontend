@@ -8,6 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { EventListComponent } from './components/event-list/event-list.component';
 import { LoginGuard } from './login.guard';
 import { DetailEventComponent } from './components/detail-event/detail-event.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'events/:pEventId', component: DetailEventComponent, canActivate: [LoginGuard] },
   { path: 'events', component: EventListComponent, canActivate: [LoginGuard] },
   { path: 'register', component: FormUsersComponent },
+  { path: 'profile', component: ProfileComponent, canActivate: [LoginGuard] },
   { path: '**', redirectTo: '/home' }
 ];
 

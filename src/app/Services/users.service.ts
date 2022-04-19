@@ -15,7 +15,7 @@ export class UsersService {
 
   }
 
-  // revisar la ruta de este getAll
+
   getAll() {
     return firstValueFrom(
       this.HttpClient.get<any[]>(this.baseUrl));
@@ -34,6 +34,22 @@ export class UsersService {
       this.HttpClient.post(this.baseUrl + "login", login));
 
   }
+
+
+  profileUser(profile: any) {
+
+    //*******************************/
+    const httpOptions = {
+      headers: new HttpHeaders({
+        "authentication": localStorage.getItem('token')
+      })
+    }
+
+    return firstValueFrom(this.HttpClient.get(this.baseUrl + "profile", httpOptions))
+
+  }
+
+
 
   createUser(formValue: any) {
 
