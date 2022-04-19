@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@100&display=swap');
+
+
+.evento {
+    background-color: goldenrod;
+    border: 5px solid black;
+    font-family: Roboto;
+    padding: 30px;
+
+}
+
+h3 {
+    padding: 10px;
+    font-size: 1.5em;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.datos {
+    width: 100%;
+    background-color: black;
+    border: 2px solid goldenrod;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.datos p {
+    color: goldenrod;
+}
+
+.map {
+    margin: 20px;
+    width: 100%;
+    height: 300px;
+
+}

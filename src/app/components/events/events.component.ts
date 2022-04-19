@@ -15,6 +15,7 @@ export class EventsComponent implements OnInit {
       date: new FormControl('', Validators.required),
       time: new FormControl('', Validators.required),
       image: new FormControl('', Validators.required),
+      language_id: new FormControl('', Validators.required),
       description: new FormControl('',),
       address: new FormControl('', Validators.required)
     })
@@ -26,8 +27,9 @@ export class EventsComponent implements OnInit {
 
   async onSubmit() {
     const response = await this.eventsService.createEvent(this.formEvent.value);
-    this.formEvent.reset();
     console.log(response)
+
+    this.formEvent.reset();
 
   }
 }
