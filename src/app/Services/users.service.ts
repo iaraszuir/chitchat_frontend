@@ -21,6 +21,12 @@ export class UsersService {
       this.HttpClient.get<any[]>(this.baseUrl));
   }
 
+  getByLan(pLanId, pType) {
+
+    return firstValueFrom(this.HttpClient.get<any[]>(this.baseUrl + `/lan/${pLanId}/type/${pType}`))
+
+
+  }
 
   loginUser(login: any): any {
 
@@ -41,5 +47,8 @@ export class UsersService {
     return firstValueFrom(
       this.HttpClient.post(this.baseUrl + "register", formValue, httpOptions));
   }
+
+
+
 
 }

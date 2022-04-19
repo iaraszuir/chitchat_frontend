@@ -30,6 +30,7 @@ export class FormUsersComponent implements OnInit {
   async onSubmit() {
     const response = await this.usersService.createUser(this.form.value);
     console.log(response)
+    this.form.reset()
   }
 
 }

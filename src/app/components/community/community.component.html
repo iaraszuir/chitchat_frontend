@@ -1,24 +1,58 @@
 <app-nav-bar></app-nav-bar>
 
-<div class="users">
 
-    <div class="user" *ngFor="let user of arrUsers">
-        <div class="avatar">
-            <img src="../../../assets/images/16467606582013.jpg" alt="">
+<div class="container">
 
-        </div>
-        <div class="data">
 
-            <h2>{{user.username}}</h2>
-            <p>Nombre: {{user.name}} {{user.surname}}</p>
-            <p>Género:{{user.gender}}</p>
+    <div class="selector">
+        <div>
+            <label for="staticEmail" class="col-sm-2 col-form-label">Hablan:</label>
+            <select (change)="onChange($event)" class="form-select form-select-sm">
 
-            <p>Hablo:{{user.languageHas}}</p>
-
-            <p>Quiere:{{user.languageWant}}</p>
-
+                <option value="1">Español </option>
+                <option value="2">Inglés</option>
+                <option value="3">Aleman</option>
+                <option value="4">Japones</option>
+            </select>
         </div>
 
+        <div>
+            <label for="staticEmail" class="col-sm-2 col-form-label">Enseñan:</label>
+            <select (change)="onChangeW($event)" class="form-select form-select-sm">
+
+                <option value="1">Español </option>
+                <option value="2">Inglés</option>
+                <option value="3">Aleman</option>
+                <option value="4">Japones</option>
+            </select>
+        </div>
 
     </div>
+
+    <div class="users">
+
+        <div class="user" *ngFor="let user of arrUsers">
+            <div class="avatar">
+                <img src="../../../assets/images/16467606582013.jpg" alt="">
+
+            </div>
+            <div class="data">
+
+                <h2>{{user.username}}</h2>
+                <p>Nombre: {{user.name}} {{user.surname}}</p>
+                <p>Género:{{user.gender}}</p>
+
+                <p>Hablo:{{user.languageHas}}</p>
+
+                <p>Quiere:{{user.languageWant}}</p>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="btn">
+        <button>Anterior </button>
+        <button>Siguiente</button>
+    </div>
+
 </div>

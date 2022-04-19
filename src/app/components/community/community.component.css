@@ -1,16 +1,51 @@
+.container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.selector {
+
+    display: flex;
+
+
+}
+
+.selector div {
+    background-color: blueviolet;
+}
+
+.selector select {
+    display: block;
+    width: 300px;
+    padding: 5px;
+    margin: 10px;
+    border: 2px solid white;
+    background-color: white;
+    color: #3a6ac2;
+    font-weight: 700;
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+
+}
+
 .users {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 100vw;
-    height: 100vh;
+
     padding: 100px;
 }
 
 .user {
     display: flex;
     width: 450px;
-    height: 250px;
+    height: auto;
     margin: 10px;
     padding: 10px;
     border: 2px solid #7aaefd;
@@ -18,15 +53,15 @@
 
 .avatar img {
 
-    width: 200px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
 
 
 }
 
 .data {
-    padding: 10px;
+
     width: 100%;
     background-color: #7aaefd;
 }
