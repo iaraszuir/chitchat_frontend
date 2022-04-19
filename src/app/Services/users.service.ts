@@ -36,16 +36,17 @@ export class UsersService {
   }
 
 
-  profileUser(profile: any) {
+  profileUser() {
 
-    //*******************************/
+
     const httpOptions = {
       headers: new HttpHeaders({
         "authentication": localStorage.getItem('token')
       })
     }
 
-    return firstValueFrom(this.HttpClient.get(this.baseUrl + "profile", httpOptions))
+    return firstValueFrom(
+      this.HttpClient.get(this.baseUrl + '/profile', httpOptions))
 
   }
 
