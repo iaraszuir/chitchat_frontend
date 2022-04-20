@@ -3,12 +3,13 @@
 <div class="evento container d-flex flex-wrap">
     <img [src]="event.image">
     <h3>{{event.title}}</h3>
-    <button class="btn btn-outline-light mt-3">Asistiré!!</button>
+    <button class="btn btn-outline-dark mt-3" (click)="onClick()">Asistiré!!</button>
     <hr>
     <div class="datos">
         <p>Dia: {{event.date | date }}</p>
         <p>Hora: {{event.time | slice:0:-3}}</p>
         <p class="description">{{event.description}}</p>
+
     </div>
 
     <div class="map">
@@ -16,5 +17,12 @@
         <app-mapang [lat]="event.lat" [lng]="event.lng">
         </app-mapang>
     </div>
+    <div class="mt-4">
+        <h4>Asistentes</h4>
+        <ul>
+            <li *ngFor="let user of event.users">{{user.name}}</li>
+        </ul>
+    </div>
+
 
 </div>
