@@ -3,6 +3,7 @@
 <div class="evento container d-flex flex-wrap">
     <img [src]="event.image">
     <h3>{{event.title}}</h3>
+    <button class="btn btn-outline-light mt-3">Asistiré!!</button>
     <hr>
     <div class="datos">
         <p>Dia: {{event.date | date }}</p>
@@ -15,4 +16,5 @@
         <app-mapang [lat]="event.lat" [lng]="event.lng">
         </app-mapang>
     </div>
+
 </div>

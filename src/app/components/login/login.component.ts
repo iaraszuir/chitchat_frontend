@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
   }
 
   async onSubmit(login: any) {
-
+    //Le pasamos por parametro los valores del formulario recogidos en html
     const respuesta = await this.userService.loginUser(login.value);
     if (respuesta.error) {
       alert(respuesta.error)
