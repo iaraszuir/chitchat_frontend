@@ -21,11 +21,6 @@ export class MapangComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  ngAfterViewInit() {
-    navigator.geolocation.getCurrentPosition(position => {
-      this.lat = position.coords.latitude;
-      this.lng = position.coords.longitude;
-    })
-  }
+
 
 }

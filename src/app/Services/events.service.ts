@@ -8,9 +8,11 @@ import { firstValueFrom } from 'rxjs';
 export class EventsService {
   baseUrl: string;
 
+
   constructor(private httpClient: HttpClient) {
 
     this.baseUrl = 'http://localhost:3000/api/events';
+
 
   }
 
@@ -83,8 +85,8 @@ export class EventsService {
       this.httpClient.get<any>(this.baseUrl + '/' + pEventId + '/addUser', httpOptions)
     )
 
-
   }
+
 
 
 }

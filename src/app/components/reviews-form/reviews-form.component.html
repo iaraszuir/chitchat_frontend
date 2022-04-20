@@ -1,0 +1,22 @@
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <div>
+        <label class="form-label" for="">Título:</label>
+        <input type="text" class="form-control" name="title" ngModel>
+    </div>
+    <div>
+        <label class="form-label" for="">Opinión:</label>
+        <input type="text" class="form-control" name="description" ngModel>
+    </div>
+
+    <div>
+        <label class="form-label" for="">Opinión:</label>
+        <input type="range" class="form-control" name="score" min="1" max="10" ngModel>
+    </div>
+
+    <div>
+        <input type="submit" value="Enviar">
+    </div>
+
+
+
+</form>
