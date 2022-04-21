@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+
+:root {
+    --fontfamily: 'Roboto', sans-serif;
+    --maincolor: #3a6ac2;
+    --secondcolor: #44caaa;
+}
+
 .bar {
     background-color: white;
     color: black;
@@ -15,8 +22,6 @@
     color: black;
 }
 
-.menu li:hover {
-    background-color: rebeccapurple;
-    border-radius: 5px;
-    transition: 0.3s ease;
+.logo {
+    color: var(--maincolor)
 }

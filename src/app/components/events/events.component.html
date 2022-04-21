@@ -1,45 +1,48 @@
 <app-nav-bar></app-nav-bar>
+<div class="container-fluid all">
+    <div class="d-flex row">
+        <h2>Crea tu evento</h2>
+        <div class="col-6 mt-3">
+            <img src="../../../assets/images/burbujaverde.png">
+        </div>
+        <div class="formulario col-5">
 
-<h2>Crea tu evento privado</h2>
-<div class="d-flex row">
-    <div class="formulario col-5">
-        <form [formGroup]="formEvent" (ngSubmit)="onSubmit()">
-            <div class="form-group m-3">
-                <input class="form-control" type="text" formControlName="title" placeholder="Título">
-            </div>
-            <div class="form-group m-3">
-                <input class="form-control" type="text" formControlName="image" placeholder="Imagen">
-            </div>
-            <div class="form-group m-3">
-                <input class="form-control" type="text" formControlName="description" placeholder="Descripción">
-            </div>
-            <div class="form-group m-3">
-                <input class="form-control" type="text" formControlName="address" placeholder="Dirección">
-            </div>
-            <div class="form-group m-3">
-                <label class="form-label">¿Cuando?</label>
-                <input class="form-control" type="date" formControlName="date">
-            </div>
-            <div class="form-group m-3">
-                <label class="form-label">¿A qué hora?</label>
-                <input class="form-control" type="time" formControlName="time">
-            </div>
-            <div class="form-group m-3">
-                <label class="form-label">¿En qué idioma nos comunicaremos?</label>
-                <select class="form-control" formControlName="language_id">
-                    <option value="1">Español</option>
-                    <option value="2">Inglés</option>
-                    <option value="3">Alemán</option>
-                    <option value="4">Japonés</option>
-                </select>
-            </div>
+            <form [formGroup]="formEvent" (ngSubmit)="onSubmit()">
+                <div class="form-group m-3">
+                    <input class="form-control" type="text" formControlName="title" placeholder="Título">
+                </div>
+                <div class="form-group m-3">
+                    <input class="form-control" type="text" formControlName="image" placeholder="Imagen">
+                </div>
+                <div class="form-group m-3">
+                    <input class="form-control" type="text" formControlName="description" placeholder="Descripción">
+                </div>
+                <div class="form-group m-3">
+                    <input class="form-control" type="text" formControlName="address" placeholder="Dirección">
+                </div>
+                <div class="form-group m-3">
+                    <label class="form-label">¿Cuando?</label>
+                    <input class="form-control" type="date" formControlName="date">
+                </div>
+                <div class="form-group m-3">
+                    <label class="form-label">¿A qué hora?</label>
+                    <input class="form-control" type="time" formControlName="time">
+                </div>
+                <div class="form-group m-3">
+                    <label class="form-label">¿En qué idioma nos comunicaremos?</label>
+                    <select class="form-control" formControlName="language_id">
+                        <option value="1">Español</option>
+                        <option value="2">Inglés</option>
+                        <option value="3">Alemán</option>
+                        <option value="4">Japonés</option>
+                    </select>
+                </div>
 
-            <div>
-                <input id="submit" class="btn m-3" type="submit" value="Enviar evento">
-            </div>
-        </form>
-    </div>
-    <div class="col-6 mt-3">
-        <img src="../../../assets/images/3gentehablando.jpg">
+                <div>
+                    <input id="submit" class="btn m-3" type="submit" value="Enviar evento">
+                </div>
+            </form>
+        </div>
+
     </div>
 </div>

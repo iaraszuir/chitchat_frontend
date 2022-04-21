@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { EventsService } from 'src/app/Services/events.service';
 
 @Component({
   selector: 'app-mapang',
@@ -7,18 +8,17 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MapangComponent implements OnInit {
 
-
   @Input() lat: number;
   @Input() lng: number;
-
 
   constructor() {
     this.lat = 0;
     this.lng = 0;
 
+
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 
