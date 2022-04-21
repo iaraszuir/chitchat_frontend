@@ -23,7 +23,7 @@ figcaption {
 .event {
 
     margin: 20px;
-    background-color: rgb(136, 136, 230);
+    background: linear-gradient(180deg, #44caaa 0%, #7aaefd 100%);
     padding: 30px;
     border-radius: 20px;
 }

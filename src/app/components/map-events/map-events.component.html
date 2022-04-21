@@ -1,0 +1,7 @@
+<agm-map class="mapa" [fitBounds]="true">
+    <agm-marker *ngFor="let event of events" [latitude]="event.lat" [longitude]="event.lng" [agmFitBounds]="true">
+        <agm-info-window>
+            <p>{{event.title}}</p>
+        </agm-info-window>
+    </agm-marker>
+</agm-map>
