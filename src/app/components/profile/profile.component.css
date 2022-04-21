@@ -1,8 +1,20 @@
 .user {
     display: flex;
+    background-color: aqua;
 }
 
-img {
+.user img {
     width: 300px;
     height: 300px;
+
+}
+
+.event {
+    display: flex;
+    background-color: aquamarine;
+}
+
+.event img {
+    width: 150px;
+    height: 150px;
 }

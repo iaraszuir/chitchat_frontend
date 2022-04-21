@@ -65,6 +65,22 @@ export class UsersService {
   }
 
 
+  eventsProfile() {
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        "authentication": localStorage.getItem('token')
+      })
+    }
+
+    return firstValueFrom(this.HttpClient.get<any>(this.baseUrl + "profile/events", httpOptions))
+
+  }
 
 
 }
+
+
+
+
+
