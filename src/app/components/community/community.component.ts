@@ -33,6 +33,7 @@ export class CommunityComponent implements OnInit {
     } else {
 
       const response = await this.userservice.getByLan($event.target.value, "h")
+      console.log(response)
       this.arrUsers = response
     }
 

@@ -36,8 +36,7 @@
 
         <div class="user" *ngFor="let user of arrUsers">
             <div class="avatar">
-                <img src="../../../assets/images/16467606582013.jpg" alt="">
-
+                <img [src]="user.imagen" alt="">
             </div>
             <div class="data">
 

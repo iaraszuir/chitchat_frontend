@@ -1,8 +1,16 @@
 <div class="user m-3">
-    <h4> {{user.name}} {{user.surname}}</h4>
-    <p> {{user.surname}}</p>
-    <p>{{user.username}}</p>
-    <p>{{user.mail}}</p>
-    <p>{{user.gender}}</p>
-    <img [src]="user.image" alt="">
+    <div>
+        <img [src]="user.imagen" alt="">
+    </div>
+
+    <div>
+
+        <h4>{{user.username}}</h4>
+        <p> {{user.name}} {{user.surname}}</p>
+        <p>{{user.email}}</p>
+        <p>{{user.gender}}</p>
+        <p>{{user.date_birth}}</p>
+
+
+    </div>
 </div>

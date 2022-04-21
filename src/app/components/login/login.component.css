@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 
+
+
+
 /* 
 verde camiseta : #44caaa
 3a6ac2 azul pantalon
@@ -55,14 +58,19 @@ div.wave {
 
 
 /*navbar*/
+.navbar {
+    height: 100px;
+    font-size: 20px;
+}
 
 .navbar-brand {
 
     color: var(--maincolor);
+    font-size: 30px;
 }
 
-/*HERO */
 
+/*HERO */
 
 
 .elements {
@@ -85,6 +93,7 @@ div.wave {
     color: whitesmoke;
     margin-bottom: 50px;
 
+
 }
 
 .introduction span {
@@ -95,17 +104,18 @@ div.wave {
 }
 
 .introduction h1 {
-    font-size: 65px;
+    font-size: 62px;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
+    margin-left: 150px;
 
 }
 
 .firstpart img {
-    width: 77%;
+    width: 70%;
     height: auto;
     z-index: 100;
-    margin-left: 100px;
+    margin-left: 200px;
     position: relative;
 }
 
@@ -190,6 +200,14 @@ h2 {
 
 
 /* PARTS ABOUTUS */
+
+
+hr {
+    border: 0;
+    height: 2px;
+    border-top: 1px dashed #3a6ac2;
+    border-bottom: 1px dashed #3a6ac2;
+}
 
 .aboutus {
     display: block;
