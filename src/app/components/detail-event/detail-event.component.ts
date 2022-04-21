@@ -8,9 +8,12 @@ import { EventsService } from 'src/app/Services/events.service';
   styleUrls: ['./detail-event.component.css']
 })
 export class DetailEventComponent implements OnInit {
+
   event: any;
+  reviews: any[];
   constructor(private activatedRoute: ActivatedRoute, private eventService: EventsService, private router: Router) {
     this.event = {};
+    this.reviews = [];
   }
 
 
@@ -18,18 +21,31 @@ export class DetailEventComponent implements OnInit {
 
     this.activatedRoute.params.subscribe(async params => {
       const response = await this.eventService.getById(params['pEventId'])
+      const responseV2 = await this.eventService.getReviews(params['pEventId'])
+
       this.event = response[0];
-      console.log(this.event)
+      this.reviews = responseV2;
+
     })
+
+
+
   }
   onClick() {
     this.activatedRoute.params.subscribe(async params => {
       const responseV2 = await this.eventService.addEventUser(params['pEventId'])
       const response = await this.eventService.getById(params['pEventId'])
       this.event = response[0];
-
     })
 
   }
+
+  async onReviewCreated() {
+    this.activatedRoute.params.subscribe(async params => {
+      const responseV2 = await this.eventService.getReviews(params['pEventId'])
+      this.reviews = responseV2
+    })
+  }
+
 
 }

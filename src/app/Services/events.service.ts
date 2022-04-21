@@ -59,6 +59,7 @@ export class EventsService {
     )
   }
 
+
   getByLan(pLanId: number) {
 
     const httpOptions = {
@@ -88,5 +89,17 @@ export class EventsService {
   }
 
 
+  getReviews(pEventId: number) {
+
+    const httpOptions = {
+      headers: new HttpHeaders({
+        "authentication": localStorage.getItem('token')
+      })
+    }
+    return firstValueFrom(
+      this.httpClient.get<any>(this.baseUrl + '/' + pEventId + '/reviews', httpOptions)
+    )
+
+  }
 
 }

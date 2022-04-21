@@ -1,29 +1,53 @@
 <app-nav-bar></app-nav-bar>
 
-<div class="evento container d-flex flex-wrap">
-    <img [src]="event.image">
-    <h3>{{event.title}}</h3>
-    <button class="btn btn-outline-dark mt-3" (click)="onClick()">Asistiré!!</button>
-    <hr>
-    <div class="datos">
-        <p>Dia: {{event.date | date }}</p>
-        <p>Hora: {{event.time | slice:0:-3}}</p>
-        <p class="description">{{event.description}}</p>
+<div class="d-flex justify-content-center">
+    <div class="evento col-7 m-3 d-flex flex-column justify-content-center">
+        <h3>{{event.title}}</h3>
+        <div class="d-flex">
+            <img [src]="event.image">
+            <div class="datos mt-3">
+                <p>Dia: {{event.date | date }}</p>
+                <p>Hora: {{event.time | slice:0:-3}}</p>
+                <p class="description">{{event.description}}</p>
+                <button class="btn btn-outline-light mt-3" (click)="onClick()">Asistiré!!</button>
+            </div>
+        </div>
 
+        <div class="map pb-4">
+            <p>Ubicación: {{event.address}}</p>
+            <app-mapang [lat]="event.lat" [lng]="event.lng">
+            </app-mapang>
+        </div>
+        <div class="asistance mt-3 p-3">
+            <h4>Asistentes</h4>
+            <ul>
+                <li *ngFor="let user of event.users">{{user.name}}</li>
+            </ul>
+        </div>
     </div>
 
-    <div class="map">
-        <p>Ubicación: {{event.address}}</p>
-        <app-mapang [lat]="event.lat" [lng]="event.lng">
-        </app-mapang>
-    </div>
-    <div class="mt-4">
-        <h4>Asistentes</h4>
-        <ul>
-            <li *ngFor="let user of event.users">{{user.name}}</li>
-        </ul>
-    </div>
 
+    <div class="eventdetail col- 4 d-flex flex-wrap">
+        <div class="m-3 p-3 reviews">
+            <div class="p-3 form">
+                <h3>Danos tu opinión</h3>
+                <app-reviews-form (reviewCreated)="onReviewCreated()"></app-reviews-form>
+            </div>
+            <h3>Reviews</h3>
+            <div *ngFor="let review of reviews">
+                <h4>{{review.title}}</h4>
+                <p>{{review.description}}</p>
+
+                <div [ngSwitch]="review.score" class="d-flex">
+                    <p>Puntuación:</p>
+                    <p *ngSwitchCase="1">⭐</p>
+                    <p *ngSwitchCase="2">⭐⭐</p>
+                    <p *ngSwitchCase="3">⭐⭐⭐</p>
+                    <p *ngSwitchCase="4">⭐⭐⭐⭐</p>
+                    <p *ngSwitchCase="5">⭐⭐⭐⭐⭐</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
-
-<app-reviews-form></app-reviews-form>
