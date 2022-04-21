@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ReviewsService } from 'src/app/Services/reviews.service';
 
 @Component({
@@ -8,15 +9,25 @@ import { ReviewsService } from 'src/app/Services/reviews.service';
 })
 export class ReviewsFormComponent implements OnInit {
 
-  constructor(private reviewsService: ReviewsService) { }
+  eventId: number;
+  @Output() reviewCreated: EventEmitter<boolean>;
+
+  constructor(private reviewsService: ReviewsService, private activatedRoute: ActivatedRoute) {
+    this.reviewCreated = new EventEmitter();
+
+  }
 
   ngOnInit(): void {
+
+    this.activatedRoute.params.subscribe((params) => {
+      this.eventId = params['pEventId']
+    })
   }
 
 
   async onSubmit(form: any) {
-
+    form.value.events_id = this.eventId;
     const response = await this.reviewsService.createReview(form.value)
-    console.log(response);
+    this.reviewCreated.emit(true);
   }
 }

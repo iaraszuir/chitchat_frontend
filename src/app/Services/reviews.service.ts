@@ -13,9 +13,6 @@ export class ReviewsService {
     this.baseUrl = 'http://localhost:3000/api/reviews'
   }
 
-
-
-
   createReview(formValue: any) {
 
 
@@ -30,4 +27,6 @@ export class ReviewsService {
       this.httpclient.post<any>(this.baseUrl + '/new', formValue, httpOptions)
     )
   }
+
+
 }

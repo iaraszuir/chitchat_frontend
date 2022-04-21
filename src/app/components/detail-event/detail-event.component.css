@@ -3,10 +3,9 @@
 
 .evento {
     background-color: goldenrod;
-    border: 5px solid black;
+    border: 2px solid black;
     font-family: Roboto;
-    padding: 30px;
-
+    padding: 20px;
 }
 
 h3 {
@@ -23,19 +22,40 @@ img {
 
 .datos {
     width: 100%;
-    background-color: black;
     border: 2px solid goldenrod;
-    padding: 20px;
+    padding: 10px;
     border-radius: 20px;
 }
 
 .datos p {
-    color: goldenrod;
+    color: black;
 }
 
 .map {
-    margin: 20px;
-    width: 100%;
+    margin: 10px;
+    width: 50%;
     height: 300px;
 
+}
+
+.form {
+    background-color: goldenrod;
+    border: 2px solid black;
+}
+
+.reviews {
+
+    background-color: goldenrod;
+    border: 2px solid black;
+}
+
+.reviews h3 {
+    background-color: black;
+    color: goldenrod;
+}
+
+.asistance {
+
+    background-color: goldenrod;
+    border: 2px solid black;
 }
