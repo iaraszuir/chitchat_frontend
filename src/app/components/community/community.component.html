@@ -2,6 +2,16 @@
 
 <div class="hero">
 
+
+    <div>
+        <h1>Comunidad</h1>
+
+    </div>
+    <div>
+        <h2>«Si hablas a un hombre en un idioma que comprenda, eso llega a su cabeza. Si hablas con él en su idioma, eso llega a su corazón», Nelson Mandela</h2>
+
+    </div>
+
 </div>
 
 
@@ -44,9 +54,9 @@
                 <p>Nombre: {{user.name}} {{user.surname}}</p>
                 <p>Género:{{user.gender}}</p>
 
-                <p>Hablo:{{user.languageHas}}</p>
+                <p>Hablo: <img [src]="user.languageHas" alt=""></p>
 
-                <p>Quiere:{{user.languageWant}}</p>
+                <p>Quiere: <img [src]="user.languageWant" alt=""></p>
 
             </div>
         </div>

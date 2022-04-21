@@ -13,7 +13,11 @@
         <p>{{user.email}}</p>
         <p>{{user.gender}}</p>
         <p>{{user.date_birth}}</p>
-
+        
+        <div class="flag">
+            <img [src]="user.languageHas" alt="">
+            <img [src]="user.languageWant" alt="">
+        </div>
 
     </div>
 </div>
