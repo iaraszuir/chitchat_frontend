@@ -1,23 +1,28 @@
 <app-nav-bar></app-nav-bar>
 
+
 <div class="hero">
 
 
     <div>
         <h1>Comunidad</h1>
-
     </div>
+
     <div>
-        <h2>«Si hablas a un hombre en un idioma que comprenda, eso llega a su cabeza. Si hablas con él en su idioma, eso llega a su corazón», Nelson Mandela</h2>
+        <h2>«Si hablas a un hombre en un idioma que comprenda, eso llega a su cabeza. Si hablas con él en su idioma, eso llega a su corazón» -Nelson Mandela</h2>
 
     </div>
 
 </div>
 
 
+
 <div class="container">
 
+
+
     <div class="selector">
+
         <div>
             <label for="staticEmail" class="col-sm-2 col-form-label">Hablan:</label>
             <select (change)="onChange($event)" class="form-select form-select-sm">
@@ -30,7 +35,7 @@
         </div>
 
         <div>
-            <label for="staticEmail" class="col-sm-2 col-form-label">Enseñan:</label>
+            <label for="staticEmail" class="col-sm-2 col-form-label">Buscan:</label>
             <select (change)="onChangeW($event)" class="form-select form-select-sm">
                 <option value="reset">Reset</option>
                 <option value="1">Español </option>
@@ -54,9 +59,13 @@
                 <p>Nombre: {{user.name}} {{user.surname}}</p>
                 <p>Género:{{user.gender}}</p>
 
-                <p>Hablo: <img [src]="user.languageHas" alt=""></p>
+                <div class="lan">
 
-                <p>Quiere: <img [src]="user.languageWant" alt=""></p>
+                    <p>Nativo: <img [src]="user.languageHas" alt=""></p>
+
+                    <p>Busca: <img [src]="user.languageWant" alt=""></p>
+
+                </div>
 
             </div>
         </div>
