@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 
-
 main {
     width: 100%;
     height: auto;
@@ -11,16 +10,12 @@ main {
 
 }
 
-
-
-
 /* LOGO */
 .logo {
     display: inline;
     font-size: 1.2em;
     color: #fff;
 }
-
 
 .title {
     text-align: center;
@@ -35,7 +30,6 @@ main {
     border-bottom: 2px solid white;
 }
 
-
 .register {
     display: flex;
     flex-direction: row;
@@ -45,8 +39,6 @@ main {
     border-radius: 30px;
     align-items: center;
 }
-
-
 
 .detail {
 
@@ -168,11 +160,6 @@ label {
     font-size: large;
     font-weight: 700;
 }
-
-
-
-
-
 
 /* MEDIA QUERYS */
 
