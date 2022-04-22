@@ -1,16 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto:wght@100&display=swap');
 
+:root {
+    --fontfamily: 'Roboto', sans-serif;
+    --maincolor: #3a6ac2;
+    --secondcolor: #44caaa;
+}
 
 .evento {
-    background-color: goldenrod;
-    border: 2px solid black;
+    background: linear-gradient(180deg, #44caaa 0%, #7aaefd 100%);
     font-family: Roboto;
     padding: 20px;
 }
 
-h3 {
+.evento h3 {
     padding: 10px;
-    font-size: 1.5em;
+    font-size: 2em;
+    color: var(--maincolor);
+    font-weight: 400;
 }
 
 img {
@@ -22,40 +28,57 @@ img {
 
 .datos {
     width: 100%;
-    border: 2px solid goldenrod;
     padding: 10px;
     border-radius: 20px;
 }
 
 .datos p {
-    color: black;
+    color: white;
+    font-weight: 400;
 }
 
 .map {
     margin: 10px;
     width: 50%;
     height: 300px;
+    color: var(--maincolor);
+    font-weight: 400;
 
 }
 
 .form {
-    background-color: goldenrod;
-    border: 2px solid black;
+    background: linear-gradient(180deg, #44caaa 0%, #7aaefd 100%);
+    border: 2px solid white;
 }
 
 .reviews {
 
-    background-color: goldenrod;
-    border: 2px solid black;
+    background: linear-gradient(180deg, #44caaa 0%, #7aaefd 100%);
+    border-left: 2px solid white;
+    color: var(--maincolor);
 }
 
 .reviews h3 {
-    background-color: black;
-    color: goldenrod;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: var(--maincolor);
+    color: var(--secondcolor);
 }
 
 .asistance {
 
-    background-color: goldenrod;
-    border: 2px solid black;
+    background: 180deg, #44caaa 0%, #7aaefd 100%;
+    color: var(--maincolor);
+
+}
+
+.asistance h4 {
+    margin-top: 20px;
+    background-color: var(--maincolor);
+    color: var(--secondcolor);
+    padding: 10px;
+}
+
+.eventdetail {
+    margin-left: 50px;
 }
