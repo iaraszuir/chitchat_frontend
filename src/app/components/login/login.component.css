@@ -21,13 +21,7 @@ b6f0e1
  box-shadow: 5px 5px 5px 5px ;
 */
 
-:root {
-    --fontfamily: 'Roboto', sans-serif;
-    --maincolor: #3a6ac2;
-    --secondcolor: #44caaa;
 
-
-}
 
 div.wave {
     width: 100%;
@@ -147,6 +141,7 @@ h2 {
     text-align: center;
     font-size: 2.5em;
     color: #3a6ac2;
+    padding-top: 20px;
     font-family: 'Roboto', sans-serif;
     font-weight: 700
 }
@@ -199,25 +194,59 @@ h2 {
 /* PARTS ABOUTUS */
 
 
-hr {
-    border: 0;
-    height: 2px;
-    border-top: 1px dashed #3a6ac2;
-    border-bottom: 1px dashed #3a6ac2;
-}
+
 
 .aboutus {
     display: block;
 }
 
+.triangle {
+    display: block;
+    margin-top: 200px;
+    position: relative;
+    background: #3a6ac2;
+    height: 20vh;
+}
+
+.triangle::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 100px 100px 0 100px;
+    border-color: #3a6ac2 transparent transparent transparent;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+}
+
 .abouthe {
     margin-top: 100px;
-    font-size: 50px;
+    font-size: 30px;
+    padding: 20px;
     height: auto;
     align-items: center;
-    background: linear-gradient(90deg, #7aaefd 0%, hsla(157, 72%, 82%, 1) 100%);
+    text-align: center;
 
 
+}
+
+.abouthe h2 {
+    color: white;
+
+}
+
+.abouthe h4 {
+    font-size: 25px;
+    color: #44caaa;
+}
+
+
+.aboutus {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 200px;
 }
 
 .parts {
@@ -225,50 +254,97 @@ hr {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    margin-top: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding-top: 100px;
     font-family: 'Roboto', sans-serif;
 
 }
 
-.aboutus .aboutimg {
-    width: 50%;
-
+.aboutus .image {
+    width: 600px;
 }
 
-.aboutus img {
-    width: 50%;
-    height: auto;
-    margin-left: 200px;
+.aboutus .image img {
+    width: 100%;
+}
 
+#talk {
+    width: 700px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+#travel {
+    width: 700px;
 }
 
 .abouttext {
     width: 50%;
+    height: 100%;
     justify-content: center;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0.15, 0.15);
+
+
 }
 
-.abouttext h2 {
+.abouttext div {
 
-    font-size: 60px;
-    color: #4c9e9e;
+    padding: 15px;
+    align-items: center;
+}
+
+.aboutus h2 {
+
+    font-size: 40px;
+    color: #fff;
+    padding: 20px;
     text-align: left;
+    background: linear-gradient(180deg, #44caaa 0%, #7aaefd 100%);
+    border-radius: 20px;
 
 }
 
 .abouttext p {
     color: #3a6ac2;
-    font-size: 30px;
+    font-size: 25px;
+    padding: 20px;
 }
 
 
 
 /* CARDS*/
 
+.spikes {
+    position: relative;
+    background: #2c3e50;
+    height: 50vh;
+}
+
+.spikes::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: -0%;
+    top: 100%;
+    z-index: 10;
+    display: block;
+    height: 150px;
+    background-size: 150px 100%;
+    background-image: linear-gradient(135deg, #2c3e50 25%, transparent 25%), linear-gradient(225deg, #2c3e50 25%, transparent 25%);
+    background-position: 0 0;
+}
+
+
+
 .cards {
     width: 100%;
     height: 500px;
-    background-color: #7aaefd;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -279,7 +355,9 @@ hr {
 .cards div {
     width: 300px;
     height: 400px;
+    padding: 10px;
     background-color: #fff;
+    border: 2px solid #7aaefd;
     text-align: center;
     border-radius: 20px;
 
@@ -315,160 +393,228 @@ hr {
 /* MEDIA QUERIES */
 
 
-/*RESPONSIVE NAVBAR MENU */
-
-input[type=checkbox] {
-    display: none;
-}
-
-/*HAMBURGER MENU*/
-.hamburger {
-    color: #fff;
-    display: none;
-    font-size: 50px;
-    user-select: none;
-}
-
-
 @media (max-width: 768px) {
-    .menu {
-        display: none;
-        /* position: absolute; */
-        margin: 0 auto;
-        background-color: transparent;
-        text-align: center;
-        padding: 16px 0;
-    }
-
-
-
-    .menu li:hover {
-        display: inline-block;
-        background-color: #3a6ac2;
-        transition: 0.3s ease;
-    }
-
-    .menu li+li {
-        margin-top: 12px;
-
-    }
-
-    input[type=checkbox]:checked~.menu {
-        display: block;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    .dropdown {
-        width: 100vw;
-        left: 50%;
-        top: 30px;
-        transform: translateX(35%);
-    }
-
-
-    /*HERO */
 
     .elements {
         display: block;
-        max-width: 1100px;
+
     }
 
     .firstpart {
         width: 100%;
+        align-items: center;
+        margin-top: 100px;
+        margin-left: 0px;
+    }
 
+    /*Text*/
+
+    .introduction {
+        width: 90%;
+
+
+
+    }
+
+
+
+    .introduction h1 {
+        font-size: 70px;
+
+    }
+
+    .firstpart img {
+        width: 70%;
+        height: auto;
+        z-index: 100;
+        margin-left: 120px;
+        position: relative;
+    }
+
+
+
+    /* Login */
+    .secondpart {
+        width: 100%;
+        height: auto;
+        margin-top: 100px;
+
+    }
+
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 400px;
+        background: linear-gradient(180deg, #44caaa 0%, #7aaefd 100%);
+        border: 2px solid white;
+        border-radius: 30px;
+        /* box-shadow: 5px 5px 2px #3a6ac2; */
+        box-shadow: 0 8px 20px rgba(0, 0, 0.15, 0.15);
+
+    }
+
+
+    /* CARDS*/
+
+    .spikes {
+        position: relative;
+        background: #2c3e50;
+        height: 50vh;
+    }
+
+    .spikes::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        left: -0%;
+        top: 100%;
+        z-index: 10;
+        display: block;
+        height: 150px;
+        background-size: 150px 100%;
+        background-image: linear-gradient(135deg, #2c3e50 25%, transparent 25%), linear-gradient(225deg, #2c3e50 25%, transparent 25%);
+        background-position: 0 0;
+    }
+
+
+
+    .cards {
+        width: 100%;
+        height: auto;
+        background-color: #7aaefd;
+    }
+
+    .cards div {
+        margin-top: 50px;
+        margin-bottom: 10px;
+
+    }
+}
+
+@media (max-width: 425px) {
+
+    .elements {
+        display: block;
+
+    }
+
+    .firstpart {
+        width: 100%;
+        margin-top: 50px;
+        margin-left: 0px;
     }
 
     /*Text*/
 
     .introduction {
         width: 100%;
-        margin-bottom: 20px;
+        height: auto;
+        color: whitesmoke;
+        margin-bottom: 50px;
+
+
+    }
+
+    .introduction span {
+        font-size: 60px;
+
+    }
+
+    .introduction h1 {
+        font-size: 50px;
+        margin-left: 20px;
+
+    }
+
+    .firstpart img {
+        width: 70%;
+        margin-left: 70px;
+
     }
 
 
-    /*Login*/
 
+    /* Login */
     .secondpart {
         width: 100%;
-        padding-top: 10px;
+        padding: 10px;
+        margin-top: 140px;
+        margin-right: 50px;
+        padding-top: 50px;
     }
 
-    .login {
-        width: 400px;
-        margin: 100px;
-        margin-top: 200px;
-        background-color: #7aaefd;
-        border: 2px solid white;
-        border-radius: 30px;
-        box-shadow: 5px 5px 2px #3a6ac2;
-        z-index: 100;
-
-    }
 
     /* PARTS ABOUTUS */
 
 
-    .abouthe {
-        margin-top: 50px;
-        font-size: 30px;
-        height: 100px;
 
+
+    .aboutus {
+        display: block;
+    }
+
+    .triangle {
+        display: block;
+        margin-top: 50px;
+        height: auto;
+    }
+
+    .abouthe {
+        margin-top: 100px;
+        font-size: 20px;
+
+    }
+
+
+    .aboutus {
+        display: block;
+        flex-wrap: wrap;
+        margin-bottom: 200px;
     }
 
     .parts {
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 100px;
-
+        padding-top: 50px;
 
     }
 
-    .aboutus .aboutimg {
-        width: 50%;
-
-    }
-
-    .aboutus img {
+    .aboutus .image {
         width: 100%;
-        margin-left: 0px;
-        align-items: center;
+    }
 
+    .aboutus .image img {
+        width: 100%;
+    }
+
+    #talk {
+        width: 450px;
+    }
+
+    #travel {
+        width: 500px;
     }
 
     .abouttext {
-        width: 100%;
-        margin: 10px;
+        width: 90%;
+        height: 100%;
     }
 
+    .abouttext div {
 
+        padding: 15px;
+        align-items: center;
+    }
 
 
     /* CARDS*/
 
     .cards {
-        width: 100%;
+
         height: auto;
-        background-color: #7aaefd;
-        display: flex;
-        justify-content: center;
-
 
     }
-
-    .cards div {
-        width: 300px;
-        height: 400px;
-
-    }
-
-
-
-
 
 
 }
