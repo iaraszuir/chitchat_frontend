@@ -1,38 +1,61 @@
 <app-nav-bar></app-nav-bar>
 
-
-<div class="user m-3">
-    <div>
-        <img [src]="user.imagen" alt="">
-    </div>
-
-    <div>
-
-        <h4>{{user.username}}</h4>
-        <p> {{user.name}} {{user.surname}}</p>
-        <p>{{user.email}}</p>
-        <p>{{user.gender}}</p>
-        <p>{{user.date_birth}}</p>
-        
-        <div class="flag">
-            <img [src]="user.languageHas" alt="">
-            <img [src]="user.languageWant" alt="">
-        </div>
-
-    </div>
-</div>
-
-
-<div>
-
-    <div class="event" *ngFor="let event of event">
+<div class="profile d-flex flex-row justify-content-center">
+    <div class="user col-7 m-4">
         <div>
-            <img [src]="event.image" alt="">
+            <img [src]="user.imagen" alt="">
+
         </div>
         <div>
+            <h3>Mi perfil</h3>
+            <div>
+                <label>Usuario</label>
+                <input type="text" placeholder="{{user.username}}">
+            </div>
+            <div>
+                <label>Nombre</label>
+                <input type="text" placeholder="{{user.name}}">
+            </div>
+            <div>
+                <label>Apellidos</label>
+                <input type="text" placeholder="{{user.surname}}">
+            </div>
+            <div>
+                <label>Email</label>
+                <input type="email" placeholder="{{user.email}}">
+            </div>
+            <div>
+                <label>Fecha de nacimiento</label>
+                <input type="text" placeholder="{{user.date_birth | date}}">
+            </div>
+            <input type="button" value="GUARDAR">
+            <div>
+                <div>
+
+                    <div>
+                        <label>Idioma nativo</label>
+                        <img id="flag" [src]="user.languageHas">
+                    </div>
+                    <div>
+                        <label>Idioma que quiero aprender</label>
+                        <img id="flag" [src]="user.languageWant">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="events m-4 d-flex  flex-column align-center">
+
+        <div class="event" *ngFor="let event of event">
+            <img [src]="event.image">
             <p>{{event.title}}</p>
-            <p>{{event.date}}</p>
+            <p>{{event.date | date}}</p>
         </div>
-    </div>
 
+    </div>
 </div>
