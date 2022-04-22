@@ -35,6 +35,11 @@ figcaption {
     padding-top: 70px;
 }
 
+select {
+    border: 2px solid var(--maincolor);
+    color: var(--secondcolor);
+}
+
 .events {
 
     justify-content: center;
@@ -78,6 +83,10 @@ p {
     background: linear-gradient(180deg, #44caaa 0%, #7aaefd 100%);
     color: white;
     border-radius: 10px;
+}
+
+.btnevent:hover {
+    background: var(--secondcolor);
 }
 
 .btngo {
