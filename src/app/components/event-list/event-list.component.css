@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
+
+:root {
+    --fontfamily: 'Roboto', sans-serif;
+    --maincolor: #3a6ac2;
+    --secondcolor: #44caaa;
+}
+
 img {
     width: 100%;
     height: auto;
@@ -10,14 +17,29 @@ img {
 figcaption {
     text-align: center;
     font-size: 1.5em;
-    font-size: Montserrat;
-    color: rgb(136, 136, 230);
+    font-family: var(--fontfamily);
+    color: var(--maincolor);
+}
+
+.hero {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(180deg, #44caaa 0%, #7aaefd 100%);
+}
+
+.hero h1 {
+    text-align: center;
+    color: var(--maincolor);
+    font-family: var(--fontfamily);
+    font-size: 100px;
+    padding-top: 70px;
 }
 
 .events {
 
     justify-content: center;
-
+    color: var(--maincolor);
+    font-weight: 700;
 }
 
 .event {
@@ -32,7 +54,6 @@ h2 {
     text-align: center;
     color: rgb(136, 136, 230);
     font-family: Montserrat;
-
 }
 
 h3 {
@@ -45,16 +66,17 @@ p {
 }
 
 .btnevent {
+
     display: block;
     margin: 0 auto;
     padding: 10px;
     width: 90%;
     height: 80px;
-    font-family: Montserrat;
+    font-family: var(--fontfamily);
     font-size: 1.5em;
     border: 2px solid rgb(136, 136, 230);
-    background-color: white;
-    color: rgb(136, 136, 230);
+    background: linear-gradient(180deg, #44caaa 0%, #7aaefd 100%);
+    color: white;
     border-radius: 10px;
 }
 

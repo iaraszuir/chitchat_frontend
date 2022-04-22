@@ -7,19 +7,27 @@
     --secondcolor: #44caaa;
 }
 
+.activo {
+    color: var(--secondcolor) !important;
+}
+
 .bar {
     background-color: white;
-    color: black;
+    color: var(--secondcolor);
     height: auto;
 }
 
 .logo {
-    font-size: 1.5em;
+    font-size: 1.8em;
 }
 
 
 .menu li a {
-    color: black;
+    color: var(--maincolor);
+    font-family: var(--fontfamily);
+    font-weight: 700;
+    font-size: 1.3em;
+
 }
 
 .logo {

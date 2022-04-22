@@ -2,36 +2,40 @@
 
     <app-nav-bar></app-nav-bar>
 
-    <div id="container" class="d-flex">
-        <div class="firstpart p-3">
+    <div id="container">
 
-            <div class="introduction">
+        <div class="introduction d-flex">
+            <div class="col-6 m-3">
                 <h1>Atrévete con cualquier idioma con <span> ChitChat </span> <i class="fa-regular fa-comment"></i></h1>
             </div>
 
-            <img class="img-fluid" src="../../../assets/images/charla.png" alt="">
-
-        </div>
-
-        <div class="aboutus justify-content-between">
-
-            <div class="m-4">
-                <h3>Conócenos</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quaerat vel sunt incidunt tempora ex natus eius, rem modi nam sint voluptatum unde esse? Cumque, accusantium corrupti vitae porro dolores illo sint sunt doloremque eligendi similique ea iusto amet ab. Fuga deleniti non odit ad, neque ut doloribus quas dolore dignissimos similiqueç. </p>
-            </div>
-            <div class="m-4">
-                <h3>Motívate</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quaerat vel sunt incidunt tempora ex natus eius, rem modi nam sint voluptatum unde esse? Cumque, accusantium corrupti vitae porro dolores illo sint sunt doloremque eligendi similique ea iusto amet ab. Fuga deleniti non odit ad, neque ut doloribus quas dolore dignissimos similique. </p>
-            </div>
-            <div class="m-4">
-                <h3>Diviertete</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quaerat vel sunt incidunt tempora ex natus eius, rem modi nam sint voluptatum unde esse? Cumque, accusantium corrupti vitae porro dolores illo sint sunt doloremque eligendi similique ea iusto amet ab. Fuga deleniti non odit ad, neque ut doloribus quas dolore dignissimos similique. </p>
+            <div class="col-7">
+                <img class="img-fluid" src="../../../assets/images/charla.png">
             </div>
         </div>
-
-
     </div>
-</div>
-<div>
-    <app-map-events></app-map-events>
+
+    <div class="d-flex flex-column">
+        <div class="mapa m-4">
+            <h2>Conoce nuestros eventos</h2>
+            <app-map-events></app-map-events>
+        </div>
+
+        <div class="aboutus row">
+            <h2>¿Cómo empezar?</h2>
+            <div class="m-1 p-2 col-3">
+                <h3>Atrévete</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quaerat vel sunt incidunt tempora ex natus eius, rem modi nam sint voluptatum unde esse? Cumque, accusantium corrupti vitae porro dolores illo sint sunt doloremque eligendi similique ea iusto amet ab. </p>
+            </div>
+            <div class="m-1 p-2 col-3">
+                <h3>Motívate</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quaerat vel sunt incidunt tempora ex natus eius, rem modi nam sint voluptatum unde esse? Cumque, accusantium corrupti vitae porro dolores illo sint sunt doloremque eligendi similique ea iusto amet ab.</p>
+            </div>
+            <div class="m-1 p-2 col-3">
+                <h3>Diviertete</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quaerat vel sunt incidunt tempora ex natus eius, rem modi nam sint voluptatum unde esse? Cumque, accusantium corrupti vitae porro dolores illo sint sunt doloremque eligendi similique ea iusto amet ab. </p>
+            </div>
+        </div>
+    </div>
+
 </div>
