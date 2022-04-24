@@ -23,16 +23,17 @@ figcaption {
 
 .hero {
     width: 100%;
-    height: 300px;
+    height: 400px;
     background: linear-gradient(180deg, #44caaa 0%, #7aaefd 100%);
 }
 
 .hero h1 {
     text-align: center;
-    color: var(--maincolor);
+    color: white;
     font-family: var(--fontfamily);
     font-size: 100px;
-    padding-top: 70px;
+    font-weight: 700;
+    padding-top: 50px;
 }
 
 select {

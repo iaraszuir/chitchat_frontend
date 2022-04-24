@@ -48,11 +48,14 @@ main {
     border-radius: 20px;
 }
 
+
+
 .language {
     width: 600px;
     border: 2px solid white;
     padding: 20px;
     border-radius: 20px;
+    margin-bottom: 75px;
 }
 
 

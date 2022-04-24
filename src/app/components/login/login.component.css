@@ -21,7 +21,9 @@ b6f0e1
  box-shadow: 5px 5px 5px 5px ;
 */
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 div.wave {
     width: 100%;
@@ -44,7 +46,6 @@ div.wave {
     height: 90vh;
 
 }
-
 
 
 
@@ -176,7 +177,6 @@ h2 {
     align-items: center;
     border-radius: 20px;
     border-radius: 20px;
-    box-shadow: 2px 2px 2px 2px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -289,7 +289,6 @@ h2 {
 
     box-shadow: 0 8px 20px rgba(0, 0, 0.15, 0.15);
 
-
 }
 
 .abouttext div {
@@ -343,16 +342,17 @@ h2 {
 
 .cards {
     width: 100%;
-    height: 500px;
-
+    height: auto;
+    margin-top: 200px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     flex-direction: row;
+    padding-top: 60px;
 
 }
 
-.cards div {
+.card {
     width: 300px;
     height: 400px;
     padding: 10px;
@@ -361,9 +361,10 @@ h2 {
     text-align: center;
     border-radius: 20px;
 
+
 }
 
-.cards div h2 {
+.card h2 {
     font-size: 70px;
     padding-top: 30px;
     color: #44caaa;
@@ -371,7 +372,7 @@ h2 {
 
 }
 
-.cards div h3 {
+.card h3 {
     font-size: 30px;
     padding-top: 30px;
     color: #3a6ac2;
@@ -380,10 +381,20 @@ h2 {
 
 }
 
-.cards div p {
+.card p {
     color: #3a6ac2;
     font-size: 20px;
     padding-top: 30px;
+}
+
+
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+.zoom {
+    transition: transform .2s;
 }
 
 
@@ -486,7 +497,7 @@ h2 {
         background-color: #7aaefd;
     }
 
-    .cards div {
+    .card {
         margin-top: 50px;
         margin-bottom: 10px;
 
