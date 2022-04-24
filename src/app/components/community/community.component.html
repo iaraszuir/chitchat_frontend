@@ -26,7 +26,7 @@
         <div>
             <label for="staticEmail" class="col-sm-2 col-form-label">Hablan:</label>
             <select (change)="onChange($event)" class="form-select form-select-sm">
-                <option value="reset">Reset</option>
+                <option value="reset">Todos</option>
                 <option value="1">Español </option>
                 <option value="2">Inglés</option>
                 <option value="3">Aleman</option>
@@ -37,7 +37,7 @@
         <div>
             <label for="staticEmail" class="col-sm-2 col-form-label">Buscan:</label>
             <select (change)="onChangeW($event)" class="form-select form-select-sm">
-                <option value="reset">Reset</option>
+                <option value="reset">Todos</option>
                 <option value="1">Español </option>
                 <option value="2">Inglés</option>
                 <option value="3">Aleman</option>
@@ -49,27 +49,32 @@
 
     <div class="users">
 
-        <div class="user" *ngFor="let user of arrUsers">
+        <div class="user zoom" *ngFor="let user of arrUsers">
+
             <div class="avatar">
                 <img [src]="user.imagen" alt="">
             </div>
             <div class="data">
 
                 <h2>{{user.username}}</h2>
-                <p>Nombre: {{user.name}} {{user.surname}}</p>
-                <p>Género:{{user.gender}}</p>
+                <p><span> Nombre: </span> {{user.name}} {{user.surname}}</p>
+                <p> <span> Genero: </span>{{user.gender}}</p>
 
                 <div class="lan">
 
-                    <p>Nativo: <img [src]="user.languageHas" alt=""></p>
+                    <p><span> Nativo: </span>
+                        <img [src]="user.languageHas" alt="">
+                    </p>
 
-                    <p>Busca: <img [src]="user.languageWant" alt=""></p>
+                    <p><span> Busca: </span> <img [src]="user.languageWant" alt=""></p>
 
                 </div>
 
             </div>
         </div>
     </div>
+
+
 
 
 

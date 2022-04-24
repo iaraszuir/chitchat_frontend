@@ -36,6 +36,7 @@
 .selector {
 
     display: flex;
+    margin-top: 50px;
 }
 
 .selector div {
@@ -52,8 +53,8 @@
     width: 300px;
     padding: 5px;
     margin: 10px;
-    border: 2px solid #3a6ac2;
-    background-color: #3a6ac2;
+    border: 2px solid #44caaa;
+    background-color: #44caaa;
     color: whitesmoke;
     font-weight: 700;
     border-radius: 20px;
@@ -74,27 +75,43 @@
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
-
     justify-content: space-evenly;
     padding: 100px;
 }
 
 .user {
     display: flex;
-    width: 450px;
-    height: auto;
-    margin: 10px;
-    padding: 10px;
-    background-color: #7aaefd;
-    border: 2px solid #7aaefd;
-    border-radius: 20px;
+    flex-direction: column;
+    width: 300px;
+    height: 430px;
+    margin: 20px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+
+}
+
+.zoom:hover {
+    transform: scale(1.1);
+}
+
+.zoom {
+    transition: transform .2s;
+}
+
+
+.avatar {
+    border-radius: 0, 0 0 20px;
+    text-align: center;
+    background-color: #3a6ac2;
+    height: 30%;
 }
 
 .avatar img {
 
     width: 170px;
     height: 170px;
-    border-radius: 10%;
+    border-radius: 50%;
+    background-color: #3a6ac2;
+
 
 
 }
@@ -104,21 +121,31 @@ img {
     height: 30px;
     border-radius: 5px;
     margin-top: 30px;
+
 }
 
-.data {
 
+
+.data {
+    display: block;
     width: 100%;
-    padding: 10px;
+    margin-top: 65px;
+    color: #3a6ac2;
+    padding: 20px;
     border-radius: 20px;
 
 
 }
 
+span {
+    color: #3a6ac2;
+    font-weight: 700;
+}
+
 .data h2 {
 
-    color: white;
-    font-size: 40px;
+    color: #36927d;
+    font-size: 25px;
     font-weight: 700;
     text-align: center;
 }
@@ -128,5 +155,7 @@ img {
 }
 
 .lan {
+
     display: flex;
+
 }
