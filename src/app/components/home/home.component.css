@@ -60,6 +60,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom: 50px;
+    background-color: #7aaefd;
 
 
 }
@@ -71,7 +72,7 @@
     font-size: 60px;
     margin: 20px;
     padding: 20px;
-    color: var(--maincolor);
+    color: whitesmoke;
 }
 
 .aboutus h3 {
@@ -99,6 +100,7 @@
     border-radius: 20px;
     padding: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0.15, 0.15);
+    background-color: whitesmoke;
 
 }
 
@@ -116,19 +118,33 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    text-align: center;
+    margin-top: 150px;
     margin-bottom: 150px;
     /* padding-left: 150px;
     padding-bottom: 50px; */
 
 }
 
+.mapdec {
+
+    padding: 20px;
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0.15, 0.15);
+}
+
 .mapa h2 {
     font-size: 50px;
-    padding: 40px 0;
-    color: var(--maincolor);
+    height: 70px;
+    padding-top: 5px;
+    margin-bottom: 30px;
+    color: white;
     font-family: var(--fontfamily);
     font-weight: 700;
+    background: linear-gradient(180deg, #44caaa 0%, #7aaefd 100%);
+    border-radius: 5px;
+    margin-top: -60px;
 }
 
 footer {
