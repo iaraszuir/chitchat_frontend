@@ -6,26 +6,26 @@
             <img [src]="user.imagen" alt="">
 
         </div>
-        <div>
+        <div class="text">
             <h3>Mi perfil</h3>
             <div>
-                <label>Usuario</label>
+                <label for="staticEmail" class="col-sm-2 col-form-label">Usuario</label>
                 <input type="text" placeholder="{{user.username}}">
             </div>
             <div>
-                <label>Nombre</label>
+                <label for="staticEmail" class="col-sm-2 col-form-label">Nombre</label>
                 <input type="text" placeholder="{{user.name}}">
             </div>
             <div>
-                <label>Apellidos</label>
+                <label for="staticEmail" class="col-sm-2 col-form-label">Apellidos</label>
                 <input type="text" placeholder="{{user.surname}}">
             </div>
             <div>
-                <label>Email</label>
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
                 <input type="email" placeholder="{{user.email}}">
             </div>
             <div>
-                <label>Fecha de nacimiento</label>
+                <label for="staticEmail" class="col-sm-2 col-form-label">Fecha de nacimiento</label>
                 <input type="text" placeholder="{{user.date_birth | date}}">
             </div>
             <input type="button" value="GUARDAR">
@@ -33,11 +33,11 @@
                 <div>
 
                     <div>
-                        <label>Idioma nativo</label>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Idioma nativo</label>
                         <img id="flag" [src]="user.languageHas">
                     </div>
                     <div>
-                        <label>Idioma que quiero aprender</label>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Idioma que quiero aprender</label>
                         <img id="flag" [src]="user.languageWant">
                     </div>
 

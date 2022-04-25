@@ -9,20 +9,31 @@
 
 .user img {
     display: block;
-    width: 80%;
+    width: 30%;
     height: auto;
-    border: 3px solid var(--maincolor);
     border-radius: 20px;
     margin: 0 auto;
 }
 
 .event img {
     display: block;
-    width: 100%;
+    width: 60%;
     height: auto;
     border: 3px solid var(--maincolor);
     border-radius: 20px;
 
+}
+
+.text h3 {
+    font-family: var(--fontfamily);
+    font-size: 35px;
+    color: #3a6ac2;
+    font-weight: 700;
+}
+
+.text label {
+    font-size: 25px;
+    color: #3a6ac2;
 }
 
 #flag {
@@ -33,14 +44,12 @@
 
 .profile {
 
-    border: 2px solid var(--secondcolor);
     margin: 20px;
     border-radius: 20px;
 
 }
 
 .user {
-    border: 2px solid var(--maincolor);
     padding: 30px;
     border-radius: 20px;
     background: linear-gradient(180deg, #44caaa 0%, #7aaefd 100%);
