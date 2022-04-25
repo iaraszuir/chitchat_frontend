@@ -1,9 +1,7 @@
 <app-nav-bar></app-nav-bar>
+<div class="profile row">
 
-<div class="profile d-flex flex-row justify-content-center">
-
-
-    <div class="user col-7 m-4 d-flex flex-wrap">
+    <div class="user d-flex col-6 flex-wrap">
 
         <div class=" avatar justify-content-center">
             <img [src]="user.imagen" alt="">
@@ -55,12 +53,12 @@
 
     </div>
 
-    <div class="events m-4 d-flex  flex-column align-center">
+    <div class="events col-5 d-flex  flex-column p-3 ms-3 flex-wrap ">
         <h2>Mis eventos</h2>
 
-        <div class="event zoom " *ngFor="let event of event">
-            <div class="eventimg">
-                <img [src]="event.image">
+        <div class="event d-flex flex-column m-3 zoom" *ngFor="let event of event">
+            <div class="eventimg" [ngStyle]="{ backgroundImage: 'url('+event.image+')'}">
+                <!-- <img [src]="event.image"> -->
             </div>
             <div class="text">
                 <h4>{{event.title}}</h4>
