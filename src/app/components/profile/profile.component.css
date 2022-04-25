@@ -1,19 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
 
+
 :root {
     --fontfamily: 'Roboto', sans-serif;
     --maincolor: #3a6ac2;
     --secondcolor: #44caaa;
 }
 
+* {
+    font-family: var(--fontfamily);
+}
+
 .user img {
     display: block;
-    width: 80%;
+    width: 100%;
     height: auto;
     border: 3px solid var(--maincolor);
     border-radius: 20px;
-    margin: 0 auto;
 }
 
 .event img {
@@ -32,18 +36,31 @@
 }
 
 .profile {
-
-    border: 2px solid var(--secondcolor);
-    margin: 20px;
     border-radius: 20px;
-
+    background-image: url('../../../assets/images/Diseño sin título.jpg');
+    background-size: cover;
+    padding: 100px;
 }
 
 .user {
     border: 2px solid var(--maincolor);
-    padding: 30px;
+    padding: 20px;
     border-radius: 20px;
-    background: linear-gradient(180deg, #44caaa 0%, #7aaefd 100%);
+}
+
+.user div {
+    margin: 10px;
+}
+
+.user label {
+    color: var(--maincolor);
+}
+
+.user input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--maincolor);
+
 }
 
 .events {
@@ -51,5 +68,38 @@
     border: 2px solid var(--maincolor);
     padding: 30px;
     border-radius: 20px;
+}
+
+.events h2 {
+    margin: 20px 0px;
+    color: var(--maincolor);
+}
+
+.event :is(p, h4) {
+
+    color: var(--maincolor);
+    margin-top: 10px;
+
+}
+
+.event h4 {
+    text-decoration: underline;
+}
+
+.btn {
+    display: block;
+    width: 200px;
+    border: 2px solid var(--maincolor);
     background: linear-gradient(180deg, #44caaa 0%, #7aaefd 100%);
+    border-radius: 20px;
+    margin: 20px 0px;
+}
+
+.data {
+    width: 100%;
+}
+
+.data h3 {
+    margin: 20px 0px;
+    color: var(--maincolor);
 }
