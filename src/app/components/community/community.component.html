@@ -25,7 +25,7 @@
 
         <div>
             <label for="staticEmail" class="col-sm-2 col-form-label">Hablan:</label>
-            <select (change)="onChange($event)" class="form-select form-select-sm">
+            <select (change)="onChange($event)" #selectHas class="form-select form-select-sm">
                 <option value="reset">Todos</option>
                 <option value="1">Español </option>
                 <option value="2">Inglés</option>
@@ -36,7 +36,7 @@
 
         <div>
             <label for="staticEmail" class="col-sm-2 col-form-label">Buscan:</label>
-            <select (change)="onChangeW($event)" class="form-select form-select-sm">
+            <select (change)="onChangeW($event)" #selectWant class="form-select form-select-sm">
                 <option value="reset">Todos</option>
                 <option value="1">Español </option>
                 <option value="2">Inglés</option>

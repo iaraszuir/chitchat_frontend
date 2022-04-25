@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { UsersService } from 'src/app/Services/users.service';
 
 @Component({
@@ -9,6 +9,9 @@ import { UsersService } from 'src/app/Services/users.service';
 export class CommunityComponent implements OnInit {
 
   arrUsers: any[]
+
+  @ViewChild('selectHas') selectHas: ElementRef;
+  @ViewChild('selectWant') selectWant: ElementRef;
 
 
   constructor(private userservice: UsersService) {
@@ -26,7 +29,6 @@ export class CommunityComponent implements OnInit {
 
   async onChange($event: any) {
 
-
     if ($event.target.value === "reset") {
       const response = await this.userservice.getAll()
       this.arrUsers = response
@@ -38,14 +40,18 @@ export class CommunityComponent implements OnInit {
     }
 
 
-
-
   }
 
   async onChangeW($event: any) {
-    const response = await this.userservice.getByLan($event.target.value, "w")
-    this.arrUsers = response
-    console.log(response)
+    if ($event.target.value === "reset") {
+      const response = await this.userservice.getAll()
+      this.arrUsers = response
+    } else {
+
+      const response = await this.userservice.getByLan($event.target.value, "w")
+      console.log(response)
+      this.arrUsers = response
+    }
 
   }
 }

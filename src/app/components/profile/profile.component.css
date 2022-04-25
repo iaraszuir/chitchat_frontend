@@ -48,7 +48,7 @@
 
 .profile {
     border-radius: 20px;
-    background-image: url('../../../assets/images/Diseño sin título.jpg');
+    /* background-image: url('../../../assets/images/Diseño sin título.jpg'); */
     background-size: cover;
     padding: 100px;
 }
@@ -57,6 +57,7 @@
     border: 2px solid var(--maincolor);
     padding: 20px;
     border-radius: 20px;
+    background: linear-gradient(180deg, #44caaa 0%, #7aaefd 100%);
 }
 
 .user div {
@@ -71,6 +72,7 @@
     background-color: transparent;
     border: none;
     border-bottom: 1px solid var(--maincolor);
+    color: var(--secondcolor);
 
 }
 
@@ -79,6 +81,7 @@
     border: 2px solid var(--maincolor);
     padding: 30px;
     border-radius: 20px;
+    background: linear-gradient(180deg, #44caaa 0%, #7aaefd 100%);
 }
 
 .events h2 {
