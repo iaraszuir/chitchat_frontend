@@ -36,9 +36,17 @@ figcaption {
     padding-top: 50px;
 }
 
+.hero h2 {
+    text-align: center;
+    color: var(--maincolor);
+    padding-top: 30px;
+}
+
 select {
+    width: 40%;
     border: 2px solid var(--maincolor);
     color: var(--secondcolor);
+    border-radius: 20px;
 }
 
 .events {

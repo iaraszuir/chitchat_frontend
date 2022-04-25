@@ -47,8 +47,6 @@ div.wave {
 
 }
 
-
-
 /*navbar*/
 .navbar {
     height: 100px;
@@ -56,11 +54,26 @@ div.wave {
 }
 
 .navbar-brand {
-
+    font-size: 1.45em;
     color: var(--maincolor);
-    font-size: 30px;
+    padding-left: 10px;
 }
 
+.navbar-brand:hover {
+    color: var(--secondcolor);
+}
+
+nav div a {
+    color: var(--maincolor);
+    font-family: var(--fontfamily);
+    font-weight: 700;
+    font-size: 1.05em;
+}
+
+nav div a:hover {
+    color: var(--secondcolor);
+
+}
 
 /*HERO */
 

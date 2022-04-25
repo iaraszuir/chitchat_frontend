@@ -165,3 +165,9 @@ footer a:hover {
 .zoom {
     transition: transform .2s;
 }
+
+.carrusel {
+    width: 80%;
+    padding: 20px;
+    justify-content: center;
+}
