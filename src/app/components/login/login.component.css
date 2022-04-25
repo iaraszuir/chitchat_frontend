@@ -318,25 +318,8 @@ h2 {
 
 /* CARDS*/
 
-.spikes {
-    position: relative;
-    background: #2c3e50;
-    height: 50vh;
-}
 
-.spikes::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    left: -0%;
-    top: 100%;
-    z-index: 10;
-    display: block;
-    height: 150px;
-    background-size: 150px 100%;
-    background-image: linear-gradient(135deg, #2c3e50 25%, transparent 25%), linear-gradient(225deg, #2c3e50 25%, transparent 25%);
-    background-position: 0 0;
-}
+
 
 
 
