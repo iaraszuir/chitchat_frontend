@@ -22,7 +22,7 @@
 
 }
 
-
+.avatar {}
 
 .user img {
     display: block;
@@ -139,7 +139,7 @@
 
 .eventimg {
     width: 100%;
-    height: 200px;
+    height: 100px;
     background-size: cover;
     background-position: center;
 }
